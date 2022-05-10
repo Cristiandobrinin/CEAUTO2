@@ -48,7 +48,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.ChildFormPanel = new System.Windows.Forms.Panel();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.button9 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -334,7 +334,7 @@
             // 
             // ChildFormPanel
             // 
-            this.ChildFormPanel.Controls.Add(this.button9);
+            this.ChildFormPanel.Controls.Add(this.comboBox1);
             this.ChildFormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ChildFormPanel.Location = new System.Drawing.Point(0, 49);
             this.ChildFormPanel.Name = "ChildFormPanel";
@@ -342,14 +342,13 @@
             this.ChildFormPanel.TabIndex = 2;
             this.ChildFormPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ChildFormPanel_Paint);
             // 
-            // button9
+            // comboBox1
             // 
-            this.button9.Location = new System.Drawing.Point(187, 68);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(738, 244);
-            this.button9.TabIndex = 0;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = true;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(327, 80);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(436, 21);
+            this.comboBox1.TabIndex = 0;
             // 
             // Form1
             // 
@@ -396,7 +395,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
