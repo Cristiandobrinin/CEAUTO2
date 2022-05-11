@@ -16,5 +16,18 @@ namespace CEAUTO2
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            //sterge nahui
+        }
+
+        private void Child1_Load(object sender, EventArgs e)
+        {
+
+        }
+        
+
+        
     }
 }
