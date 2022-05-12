@@ -24,12 +24,18 @@ namespace CEAUTO2
 
         private void Child1_Load(object sender, EventArgs e)
         {
+            logo1.Show();
+            add1.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            add1.Show(); logo1.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
 
         }
-        
-
-        
-        
-
     }
 }
