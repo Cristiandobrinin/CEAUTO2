@@ -117,6 +117,7 @@
             this.button7.TabIndex = 13;
             this.button7.Text = "Log in";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // pictureBox7
             // 
