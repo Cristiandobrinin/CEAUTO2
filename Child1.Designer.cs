@@ -62,7 +62,7 @@
             this.panel1.Size = new System.Drawing.Size(267, 614);
             this.panel1.TabIndex = 2;
             // 
-            // panel2
+            // button3
             // 
             this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.Color.White;
