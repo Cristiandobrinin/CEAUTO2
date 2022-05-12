@@ -124,10 +124,13 @@
   <data name="long line1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\long line1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="long line2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\long line2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Menuline2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\Menuline2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="long line2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\long line2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="niceline2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\niceline2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
