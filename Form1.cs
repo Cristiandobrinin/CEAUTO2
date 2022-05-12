@@ -131,5 +131,12 @@ namespace CEAUTO2
         {
             OpenChildForm(new Child1());
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Auth auth = new Auth();
+
+            auth.Show();
+        }
     }
 }
