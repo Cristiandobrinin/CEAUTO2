@@ -98,7 +98,10 @@ namespace CEAUTO2
             
             }
                 else
-            { MessageBox.Show("let's gon't"); }
+            { MessageBox.Show("let's gon't");
+                
+            }
+
             }
             
 
@@ -112,23 +115,27 @@ namespace CEAUTO2
 
             priv = "G1";
 
-            //nu roleaza programul daca 
+            //nu roleaza programul daca utilizatoru nu a repetat parola corect
             if (textBox2.Text == textBox3.Text)
             {
 
-             
-                string querysigin = "exec addlogin '" + login + "','" + password + "', '"+priv+"'";
+                //executa o precedura de stocare
+                string querysigin = "exec addlogin '" + login + "','" + password + "', '"+priv+"'"; //comanda spre executie
                 SqlCommand signin = new SqlCommand(querysigin, sqlConnection);
                 sqlConnection.Open();
                 signin.ExecuteNonQuery();
                 sqlConnection.Close(); 
-                
-                MessageBox.Show("Utilizatorul a fost inregistrat.");
+
+
+                //####necesita exceptii
+
+
+                MessageBox.Show("Utilizatorul a fost inregistrat."); //Mesaj de confirmare 
             }
 
             else
             {
-
+                //mesaj daca parolele nu coincid
                 MessageBox.Show("Passwords doens't match");
             }
 
