@@ -223,7 +223,7 @@
             this.ChildFormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ChildFormPanel.Location = new System.Drawing.Point(0, 49);
             this.ChildFormPanel.Name = "ChildFormPanel";
-            this.ChildFormPanel.Size = new System.Drawing.Size(1434, 612);
+            this.ChildFormPanel.Size = new System.Drawing.Size(1434, 742);
             this.ChildFormPanel.TabIndex = 2;
             this.ChildFormPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ChildFormPanel_Paint);
             // 
@@ -344,11 +344,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1434, 661);
+            this.ClientSize = new System.Drawing.Size(1434, 791);
             this.Controls.Add(this.ChildFormPanel);
             this.Controls.Add(this.panel1);
             this.IsMdiContainer = true;
-            this.MinimumSize = new System.Drawing.Size(1450, 700);
+            this.MinimumSize = new System.Drawing.Size(1450, 830);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

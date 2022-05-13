@@ -52,30 +52,30 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
+            this.textBox_cut = new System.Windows.Forms.TextBox();
+            this.textBox_cor = new System.Windows.Forms.TextBox();
+            this.textBox_mot = new System.Windows.Forms.TextBox();
+            this.textBox_col = new System.Windows.Forms.TextBox();
+            this.textBox_con = new System.Windows.Forms.TextBox();
+            this.lab_cor = new System.Windows.Forms.Label();
+            this.lab_cut = new System.Windows.Forms.Label();
+            this.lab_mot = new System.Windows.Forms.Label();
+            this.lab_col = new System.Windows.Forms.Label();
+            this.lab_con = new System.Windows.Forms.Label();
             this.ceautoDataSet1 = new CEAUTO2.ceautoDataSet();
             this.dealautoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.deal_autoTableAdapter = new CEAUTO2.ceautoDataSetTableAdapters.deal_autoTableAdapter();
-            this.serialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.producerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.configDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox_ext = new System.Windows.Forms.TextBox();
+            this.lab_ext = new System.Windows.Forms.Label();
             this.usedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.configDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.producerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel_add.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -90,7 +90,6 @@
             // 
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
@@ -100,7 +99,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(273, 622);
+            this.panel1.Size = new System.Drawing.Size(273, 742);
             this.panel1.TabIndex = 2;
             // 
             // button3
@@ -110,7 +109,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(-1, 231);
+            this.button3.Location = new System.Drawing.Point(-1, 175);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(268, 50);
             this.button3.TabIndex = 6;
@@ -124,7 +123,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(-1, 175);
+            this.button2.Location = new System.Drawing.Point(-1, 119);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(268, 50);
             this.button2.TabIndex = 5;
@@ -163,17 +162,18 @@
             this.panel_add.AutoScroll = true;
             this.panel_add.AutoSize = true;
             this.panel_add.BackColor = System.Drawing.Color.White;
-            this.panel_add.Controls.Add(this.vScrollBar1);
-            this.panel_add.Controls.Add(this.textBox6);
-            this.panel_add.Controls.Add(this.textBox7);
-            this.panel_add.Controls.Add(this.textBox8);
-            this.panel_add.Controls.Add(this.textBox9);
-            this.panel_add.Controls.Add(this.textBox10);
-            this.panel_add.Controls.Add(this.label9);
-            this.panel_add.Controls.Add(this.label10);
-            this.panel_add.Controls.Add(this.label11);
-            this.panel_add.Controls.Add(this.label12);
-            this.panel_add.Controls.Add(this.label13);
+            this.panel_add.Controls.Add(this.textBox_ext);
+            this.panel_add.Controls.Add(this.lab_ext);
+            this.panel_add.Controls.Add(this.textBox_cut);
+            this.panel_add.Controls.Add(this.textBox_cor);
+            this.panel_add.Controls.Add(this.textBox_mot);
+            this.panel_add.Controls.Add(this.textBox_col);
+            this.panel_add.Controls.Add(this.textBox_con);
+            this.panel_add.Controls.Add(this.lab_cor);
+            this.panel_add.Controls.Add(this.lab_cut);
+            this.panel_add.Controls.Add(this.lab_mot);
+            this.panel_add.Controls.Add(this.lab_col);
+            this.panel_add.Controls.Add(this.lab_con);
             this.panel_add.Controls.Add(this.checkBox1);
             this.panel_add.Controls.Add(this.label8);
             this.panel_add.Controls.Add(this.panel2);
@@ -193,8 +193,9 @@
             this.panel_add.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_add.Location = new System.Drawing.Point(273, 0);
             this.panel_add.Name = "panel_add";
-            this.panel_add.Size = new System.Drawing.Size(1160, 622);
+            this.panel_add.Size = new System.Drawing.Size(1161, 742);
             this.panel_add.TabIndex = 3;
+            this.panel_add.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_add_Paint);
             // 
             // label4
             // 
@@ -246,7 +247,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(683, 625);
+            this.dataGridView1.Size = new System.Drawing.Size(684, 745);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -359,10 +360,15 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(226, 20);
             this.textBox5.TabIndex = 17;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
             this.comboBox1.Location = new System.Drawing.Point(224, 294);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(67, 21);
@@ -388,33 +394,19 @@
             this.pictureBox1.Image = global::CEAUTO2.Properties.Resources.long_line2;
             this.pictureBox1.Location = new System.Drawing.Point(265, -3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(8, 622);
+            this.pictureBox1.Size = new System.Drawing.Size(8, 742);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(-1, 119);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(268, 50);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Adauga o configuratie";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
             // panel2
             // 
             this.panel2.AutoSize = true;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1160, 0);
+            this.panel2.Location = new System.Drawing.Point(1161, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(0, 622);
+            this.panel2.Size = new System.Drawing.Size(0, 742);
             this.panel2.TabIndex = 20;
             // 
             // label8
@@ -434,119 +426,127 @@
             this.checkBox1.Size = new System.Drawing.Size(15, 14);
             this.checkBox1.TabIndex = 22;
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // textBox6
+            // textBox_cut
             // 
-            this.textBox6.Location = new System.Drawing.Point(224, 583);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(226, 20);
-            this.textBox6.TabIndex = 32;
+            this.textBox_cut.Location = new System.Drawing.Point(224, 583);
+            this.textBox_cut.Name = "textBox_cut";
+            this.textBox_cut.Size = new System.Drawing.Size(226, 20);
+            this.textBox_cut.TabIndex = 32;
+            this.textBox_cut.Visible = false;
+            this.textBox_cut.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
-            // textBox7
+            // textBox_cor
             // 
-            this.textBox7.Location = new System.Drawing.Point(224, 528);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(226, 20);
-            this.textBox7.TabIndex = 31;
+            this.textBox_cor.Location = new System.Drawing.Point(224, 528);
+            this.textBox_cor.Name = "textBox_cor";
+            this.textBox_cor.Size = new System.Drawing.Size(226, 20);
+            this.textBox_cor.TabIndex = 31;
+            this.textBox_cor.Visible = false;
+            this.textBox_cor.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
-            // textBox8
+            // textBox_mot
             // 
-            this.textBox8.Location = new System.Drawing.Point(224, 473);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(226, 20);
-            this.textBox8.TabIndex = 30;
+            this.textBox_mot.Location = new System.Drawing.Point(224, 473);
+            this.textBox_mot.Name = "textBox_mot";
+            this.textBox_mot.Size = new System.Drawing.Size(226, 20);
+            this.textBox_mot.TabIndex = 30;
+            this.textBox_mot.Visible = false;
+            this.textBox_mot.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
-            // textBox9
+            // textBox_col
             // 
-            this.textBox9.Location = new System.Drawing.Point(224, 418);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(226, 20);
-            this.textBox9.TabIndex = 29;
+            this.textBox_col.Location = new System.Drawing.Point(224, 418);
+            this.textBox_col.Name = "textBox_col";
+            this.textBox_col.Size = new System.Drawing.Size(226, 20);
+            this.textBox_col.TabIndex = 29;
+            this.textBox_col.Visible = false;
+            this.textBox_col.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
-            // textBox10
+            // textBox_con
             // 
-            this.textBox10.Location = new System.Drawing.Point(224, 367);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(226, 20);
-            this.textBox10.TabIndex = 28;
+            this.textBox_con.Location = new System.Drawing.Point(224, 367);
+            this.textBox_con.Name = "textBox_con";
+            this.textBox_con.Size = new System.Drawing.Size(226, 20);
+            this.textBox_con.TabIndex = 28;
+            this.textBox_con.Visible = false;
+            this.textBox_con.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
-            // label9
+            // lab_cor
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lab_cor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(47, 525);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 21);
-            this.label9.TabIndex = 27;
-            this.label9.Text = "Corp";
+            this.lab_cor.AutoSize = true;
+            this.lab_cor.BackColor = System.Drawing.Color.Transparent;
+            this.lab_cor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_cor.ForeColor = System.Drawing.Color.Black;
+            this.lab_cor.Location = new System.Drawing.Point(47, 525);
+            this.lab_cor.Name = "lab_cor";
+            this.lab_cor.Size = new System.Drawing.Size(49, 21);
+            this.lab_cor.TabIndex = 27;
+            this.lab_cor.Text = "Corp";
+            this.lab_cor.Visible = false;
             // 
-            // label10
+            // lab_cut
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lab_cut.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(47, 580);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(54, 21);
-            this.label10.TabIndex = 26;
-            this.label10.Text = "Cutia";
+            this.lab_cut.AutoSize = true;
+            this.lab_cut.BackColor = System.Drawing.Color.Transparent;
+            this.lab_cut.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_cut.ForeColor = System.Drawing.Color.Black;
+            this.lab_cut.Location = new System.Drawing.Point(47, 580);
+            this.lab_cut.Name = "lab_cut";
+            this.lab_cut.Size = new System.Drawing.Size(54, 21);
+            this.lab_cut.TabIndex = 26;
+            this.lab_cut.Text = "Cutia";
+            this.lab_cut.Visible = false;
             // 
-            // label11
+            // lab_mot
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lab_mot.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(47, 470);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(57, 21);
-            this.label11.TabIndex = 25;
-            this.label11.Text = "Motor";
+            this.lab_mot.AutoSize = true;
+            this.lab_mot.BackColor = System.Drawing.Color.Transparent;
+            this.lab_mot.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_mot.ForeColor = System.Drawing.Color.Black;
+            this.lab_mot.Location = new System.Drawing.Point(47, 470);
+            this.lab_mot.Name = "lab_mot";
+            this.lab_mot.Size = new System.Drawing.Size(57, 21);
+            this.lab_mot.TabIndex = 25;
+            this.lab_mot.Text = "Motor";
+            this.lab_mot.Visible = false;
             // 
-            // label12
+            // lab_col
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lab_col.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(47, 415);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(72, 21);
-            this.label12.TabIndex = 24;
-            this.label12.Text = "Culoare";
+            this.lab_col.AutoSize = true;
+            this.lab_col.BackColor = System.Drawing.Color.Transparent;
+            this.lab_col.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_col.ForeColor = System.Drawing.Color.Black;
+            this.lab_col.Location = new System.Drawing.Point(47, 415);
+            this.lab_col.Name = "lab_col";
+            this.lab_col.Size = new System.Drawing.Size(72, 21);
+            this.lab_col.TabIndex = 24;
+            this.lab_col.Text = "Culoare";
+            this.lab_col.Visible = false;
             // 
-            // label13
+            // lab_con
             // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lab_con.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(47, 367);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(62, 21);
-            this.label13.TabIndex = 23;
-            this.label13.Text = "Config";
-            // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.vScrollBar1.Location = new System.Drawing.Point(0, 0);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(17, 622);
-            this.vScrollBar1.TabIndex = 33;
+            this.lab_con.AutoSize = true;
+            this.lab_con.BackColor = System.Drawing.Color.Transparent;
+            this.lab_con.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_con.ForeColor = System.Drawing.Color.Black;
+            this.lab_con.Location = new System.Drawing.Point(47, 367);
+            this.lab_con.Name = "lab_con";
+            this.lab_con.Size = new System.Drawing.Size(96, 21);
+            this.lab_con.TabIndex = 23;
+            this.lab_con.Text = "Config nou";
+            this.lab_con.Visible = false;
             // 
             // ceautoDataSet1
             // 
@@ -562,40 +562,30 @@
             // 
             this.deal_autoTableAdapter.ClearBeforeFill = true;
             // 
-            // serialDataGridViewTextBoxColumn
+            // textBox_ext
             // 
-            this.serialDataGridViewTextBoxColumn.DataPropertyName = "serial";
-            this.serialDataGridViewTextBoxColumn.HeaderText = "serial";
-            this.serialDataGridViewTextBoxColumn.Name = "serialDataGridViewTextBoxColumn";
-            this.serialDataGridViewTextBoxColumn.ReadOnly = true;
+            this.textBox_ext.Location = new System.Drawing.Point(224, 639);
+            this.textBox_ext.Multiline = true;
+            this.textBox_ext.Name = "textBox_ext";
+            this.textBox_ext.Size = new System.Drawing.Size(226, 20);
+            this.textBox_ext.TabIndex = 36;
+            this.textBox_ext.Visible = false;
+            this.textBox_ext.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
             // 
-            // producerDataGridViewTextBoxColumn
+            // lab_ext
             // 
-            this.producerDataGridViewTextBoxColumn.DataPropertyName = "producer";
-            this.producerDataGridViewTextBoxColumn.HeaderText = "producer";
-            this.producerDataGridViewTextBoxColumn.Name = "producerDataGridViewTextBoxColumn";
-            this.producerDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // modelDataGridViewTextBoxColumn
-            // 
-            this.modelDataGridViewTextBoxColumn.DataPropertyName = "model";
-            this.modelDataGridViewTextBoxColumn.HeaderText = "model";
-            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
-            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // configDataGridViewTextBoxColumn
-            // 
-            this.configDataGridViewTextBoxColumn.DataPropertyName = "config";
-            this.configDataGridViewTextBoxColumn.HeaderText = "config";
-            this.configDataGridViewTextBoxColumn.Name = "configDataGridViewTextBoxColumn";
-            this.configDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lab_ext.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lab_ext.AutoSize = true;
+            this.lab_ext.BackColor = System.Drawing.Color.Transparent;
+            this.lab_ext.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_ext.ForeColor = System.Drawing.Color.Black;
+            this.lab_ext.Location = new System.Drawing.Point(47, 639);
+            this.lab_ext.Name = "lab_ext";
+            this.lab_ext.Size = new System.Drawing.Size(50, 21);
+            this.lab_ext.TabIndex = 34;
+            this.lab_ext.Text = "Extra";
+            this.lab_ext.Visible = false;
             // 
             // usedDataGridViewTextBoxColumn
             // 
@@ -604,12 +594,48 @@
             this.usedDataGridViewTextBoxColumn.Name = "usedDataGridViewTextBoxColumn";
             this.usedDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "price";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // configDataGridViewTextBoxColumn
+            // 
+            this.configDataGridViewTextBoxColumn.DataPropertyName = "config";
+            this.configDataGridViewTextBoxColumn.HeaderText = "config";
+            this.configDataGridViewTextBoxColumn.Name = "configDataGridViewTextBoxColumn";
+            this.configDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // modelDataGridViewTextBoxColumn
+            // 
+            this.modelDataGridViewTextBoxColumn.DataPropertyName = "model";
+            this.modelDataGridViewTextBoxColumn.HeaderText = "model";
+            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
+            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // producerDataGridViewTextBoxColumn
+            // 
+            this.producerDataGridViewTextBoxColumn.DataPropertyName = "producer";
+            this.producerDataGridViewTextBoxColumn.HeaderText = "producer";
+            this.producerDataGridViewTextBoxColumn.Name = "producerDataGridViewTextBoxColumn";
+            this.producerDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // serialDataGridViewTextBoxColumn
+            // 
+            this.serialDataGridViewTextBoxColumn.DataPropertyName = "serial";
+            this.serialDataGridViewTextBoxColumn.HeaderText = "serial";
+            this.serialDataGridViewTextBoxColumn.Name = "serialDataGridViewTextBoxColumn";
+            this.serialDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // Child1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1433, 622);
+            this.ClientSize = new System.Drawing.Size(1434, 742);
             this.Controls.Add(this.panel_add);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -654,24 +680,24 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
+        private System.Windows.Forms.TextBox textBox_cut;
+        private System.Windows.Forms.TextBox textBox_cor;
+        private System.Windows.Forms.TextBox textBox_mot;
+        private System.Windows.Forms.TextBox textBox_col;
+        private System.Windows.Forms.TextBox textBox_con;
+        private System.Windows.Forms.Label lab_cor;
+        private System.Windows.Forms.Label lab_cut;
+        private System.Windows.Forms.Label lab_mot;
+        private System.Windows.Forms.Label lab_col;
+        private System.Windows.Forms.Label lab_con;
         private ceautoDataSet ceautoDataSet1;
         private System.Windows.Forms.BindingSource dealautoBindingSource;
         private ceautoDataSetTableAdapters.deal_autoTableAdapter deal_autoTableAdapter;
+        private System.Windows.Forms.TextBox textBox_ext;
+        private System.Windows.Forms.Label lab_ext;
         private System.Windows.Forms.DataGridViewTextBoxColumn serialDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn producerDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn modelDataGridViewTextBoxColumn;
