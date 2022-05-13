@@ -31,6 +31,7 @@ namespace CEAUTO2
 
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
             
@@ -38,6 +39,7 @@ namespace CEAUTO2
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+
 
         }
 
