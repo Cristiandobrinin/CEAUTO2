@@ -24,17 +24,38 @@ namespace CEAUTO2
 
         private void Child1_Load(object sender, EventArgs e)
         {
-            logo1.Show();
-            add1.Hide();
+            // TODO: This line of code loads data into the 'ceautoDataSet1.deal_auto' table. You can move, or remove it, as needed.
+            this.deal_autoTableAdapter.Fill(this.ceautoDataSet1.deal_auto);
+            // TODO: This line of code loads data into the 'ceautoDataSet.deal_auto' table. You can move, or remove it, as needed.
+            this.deal_autoTableAdapter.Fill(this.ceautoDataSet.deal_auto);
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            add1.Show(); logo1.Hide();
+            
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.conf_autoTableAdapter.FillBy(this.ceautoDataSet.conf_auto);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
 
         }
     }
