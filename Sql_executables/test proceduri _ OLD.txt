@@ -1,0 +1,92 @@
+
+--test conf
+exec addconf Test,white,WW2,squire,semi,' ',' '
+
+exec editconf Test,void,W22,sire,fullauto,' z','z '
+
+exec rmconf Test
+
+
+Select * from conf_auto
+
+go
+
+
+--test deal
+
+exec adddeal 222,2,22,Test,2,22
+
+exec editdeal 222,test,test,Test,23,3
+
+exec rmdeal 222
+
+Select * from deal_auto
+
+go
+
+
+
+--test arenda
+
+exec addarenda 1231,ll,ff,Test,22
+
+exec editarenda 3333,ff,E,Test,343
+
+exec rmarenda 3333
+
+select * from arenda_auto
+
+go
+
+
+--Test empl
+
+go
+
+set dateformat dmy
+use ceauto
+exec addemplfulll 2,maks,karrlik,222234,23486723,'22-2-2003',112.2,muhasransk
+
+
+
+select * from empl_data right join employee on empl_data.id_empl = employee.id_empl
+go
+
+
+
+ --test client
+ exec addclient 12334,marin,pedro,gkkg,433444,kukol
+
+ select * from client
+
+ exec editclient 2, 4444,blabla,kekw,222,2222222,merioca
+
+ exec rmclient 4
+
+
+
+--test clerdit
+
+set dateformat dmy
+exec addcredit 2,bbANKA,2222,1.5,222,33,'20-4-2020','4-4-2022'
+
+select * from credit
+exec editcredit 1, 2,b22222,555,1.5,55,2,'20-4-2010','4-4-2122'
+
+exec rmcredit 1
+
+go
+
+
+--test login
+
+exec loginto 'Guest','passwd' 
+use ceauto
+exec addlogin 'sss','ss08','P1'
+
+select * from logins
+
+
+
+
+
