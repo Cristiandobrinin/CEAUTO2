@@ -52,10 +52,6 @@
             this.lab_arc = new System.Windows.Forms.Label();
             this.lab_ars = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.deal_autoTableAdapter = new CEAUTO2.ceautoDataSetTableAdapters.deal_autoTableAdapter();
-            this.arendacontBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.arenda_contTableAdapter = new CEAUTO2.ceautoDataSetTableAdapters.arenda_contTableAdapter();
             this.idcontractDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,20 +60,24 @@
             this.dataendDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tarifperziDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.spreplataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.arendacontBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.deal_autoTableAdapter = new CEAUTO2.ceautoDataSetTableAdapters.deal_autoTableAdapter();
+            this.arenda_contTableAdapter = new CEAUTO2.ceautoDataSetTableAdapters.arenda_contTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.ceautoDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealautoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ceautoDataSet)).BeginInit();
             this.panel_child4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.arendacontBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -328,35 +328,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(703, 742);
             this.dataGridView1.TabIndex = 22;
             // 
-            // panel1
-            // 
-            this.panel1.AutoSize = true;
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(273, 742);
-            this.panel1.TabIndex = 28;
-            // 
-            // deal_autoTableAdapter
-            // 
-            this.deal_autoTableAdapter.ClearBeforeFill = true;
-            // 
-            // arendacontBindingSource
-            // 
-            this.arendacontBindingSource.DataMember = "arenda_cont";
-            this.arendacontBindingSource.DataSource = this.ceautoDataSet1;
-            // 
-            // arenda_contTableAdapter
-            // 
-            this.arenda_contTableAdapter.ClearBeforeFill = true;
-            // 
             // idcontractDataGridViewTextBoxColumn
             // 
             this.idcontractDataGridViewTextBoxColumn.DataPropertyName = "id_contract";
@@ -412,6 +383,27 @@
             this.spreplataDataGridViewTextBoxColumn.HeaderText = "spre_plata";
             this.spreplataDataGridViewTextBoxColumn.Name = "spreplataDataGridViewTextBoxColumn";
             this.spreplataDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // arendacontBindingSource
+            // 
+            this.arendacontBindingSource.DataMember = "arenda_cont";
+            this.arendacontBindingSource.DataSource = this.ceautoDataSet1;
+            // 
+            // panel1
+            // 
+            this.panel1.AutoSize = true;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(273, 742);
+            this.panel1.TabIndex = 28;
             // 
             // button3
             // 
@@ -492,10 +484,17 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // deal_autoTableAdapter
+            // 
+            this.deal_autoTableAdapter.ClearBeforeFill = true;
+            // 
+            // arenda_contTableAdapter
+            // 
+            this.arenda_contTableAdapter.ClearBeforeFill = true;
+            // 
             // Child6
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(1434, 742);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel_child4);
@@ -511,9 +510,9 @@
             this.panel_child4.ResumeLayout(false);
             this.panel_child4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arendacontBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.arendacontBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

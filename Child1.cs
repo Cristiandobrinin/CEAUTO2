@@ -130,5 +130,10 @@ namespace CEAUTO2
         {
 
         }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
