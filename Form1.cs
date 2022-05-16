@@ -64,7 +64,7 @@ namespace CEAUTO2
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new Child2());
         }
 
         private void ChildFormPanel_Paint(object sender, PaintEventArgs e)
@@ -84,7 +84,7 @@ namespace CEAUTO2
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new Child6());
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
@@ -94,7 +94,7 @@ namespace CEAUTO2
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new Child5());
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -104,7 +104,7 @@ namespace CEAUTO2
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new Child4());
         }
 
         private void pictureBox3_Click_1(object sender, EventArgs e)
@@ -114,7 +114,7 @@ namespace CEAUTO2
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new Child3());
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
