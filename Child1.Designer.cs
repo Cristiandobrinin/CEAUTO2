@@ -35,6 +35,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_add = new System.Windows.Forms.Panel();
             this.textBox_ext = new System.Windows.Forms.TextBox();
             this.lab_ext = new System.Windows.Forms.Label();
@@ -74,21 +76,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ceautoDataSet = new CEAUTO2.ceautoDataSet();
             this.deal_autoTableAdapter = new CEAUTO2.ceautoDataSetTableAdapters.deal_autoTableAdapter();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_add.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealautoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ceautoDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ceautoDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
@@ -98,8 +97,10 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.MaximumSize = new System.Drawing.Size(267, 742);
+            this.panel1.MinimumSize = new System.Drawing.Size(267, 742);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(273, 742);
+            this.panel1.Size = new System.Drawing.Size(267, 742);
             this.panel1.TabIndex = 2;
             // 
             // button3
@@ -111,10 +112,11 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(-1, 175);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(268, 50);
+            this.button3.Size = new System.Drawing.Size(262, 50);
             this.button3.TabIndex = 6;
             this.button3.Text = "Sterge";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -125,10 +127,11 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(-1, 119);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(268, 50);
+            this.button2.Size = new System.Drawing.Size(262, 50);
             this.button2.TabIndex = 5;
             this.button2.Text = "Modifica";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -139,7 +142,7 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(-1, 63);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(268, 50);
+            this.button1.Size = new System.Drawing.Size(262, 50);
             this.button1.TabIndex = 4;
             this.button1.Text = "Adauga";
             this.button1.UseVisualStyleBackColor = false;
@@ -147,7 +150,6 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
@@ -157,11 +159,40 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Editare Dealer";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox2.Image = global::CEAUTO2.Properties.Resources.niceline2;
+            this.pictureBox2.Location = new System.Drawing.Point(-1, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(265, 10);
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Image = global::CEAUTO2.Properties.Resources.long_line2;
+            this.pictureBox1.Location = new System.Drawing.Point(259, -3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(8, 742);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // panel_add
             // 
             this.panel_add.AutoScroll = true;
             this.panel_add.AutoSize = true;
             this.panel_add.BackColor = System.Drawing.Color.White;
+            this.panel_add.Controls.Add(this.dataGridView1);
             this.panel_add.Controls.Add(this.textBox_ext);
             this.panel_add.Controls.Add(this.lab_ext);
             this.panel_add.Controls.Add(this.textBox_cut);
@@ -187,13 +218,13 @@
             this.panel_add.Controls.Add(this.label6);
             this.panel_add.Controls.Add(this.label5);
             this.panel_add.Controls.Add(this.label4);
-            this.panel_add.Controls.Add(this.dataGridView1);
             this.panel_add.Controls.Add(this.label3);
             this.panel_add.Controls.Add(this.label1);
             this.panel_add.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_add.Location = new System.Drawing.Point(273, 0);
+            this.panel_add.Location = new System.Drawing.Point(267, 0);
+            this.panel_add.MaximumSize = new System.Drawing.Size(1167, 742);
             this.panel_add.Name = "panel_add";
-            this.panel_add.Size = new System.Drawing.Size(1161, 742);
+            this.panel_add.Size = new System.Drawing.Size(1167, 742);
             this.panel_add.TabIndex = 3;
             this.panel_add.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_add_Paint);
             // 
@@ -365,7 +396,7 @@
             // 
             this.panel2.AutoSize = true;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1161, 0);
+            this.panel2.Location = new System.Drawing.Point(1167, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(0, 742);
             this.panel2.TabIndex = 20;
@@ -478,9 +509,6 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
@@ -504,13 +532,14 @@
             this.priceDataGridViewTextBoxColumn,
             this.usedDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.dealautoBindingSource;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Right;
             this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(477, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(488, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(684, 745);
+            this.dataGridView1.Size = new System.Drawing.Size(679, 742);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -603,32 +632,6 @@
             // 
             this.deal_autoTableAdapter.ClearBeforeFill = true;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox2.Image = global::CEAUTO2.Properties.Resources.niceline2;
-            this.pictureBox2.Location = new System.Drawing.Point(-1, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(271, 10);
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = global::CEAUTO2.Properties.Resources.long_line2;
-            this.pictureBox1.Location = new System.Drawing.Point(265, -3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(8, 742);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // Child1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -643,15 +646,14 @@
             this.Text = "Child1";
             this.Load += new System.EventHandler(this.Child1_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_add.ResumeLayout(false);
             this.panel_add.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealautoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ceautoDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ceautoDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
