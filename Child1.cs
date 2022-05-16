@@ -83,6 +83,8 @@ namespace CEAUTO2
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+            string value = "";
+            value = dataGridView1.Rows[e.RowIndex].Cells[""].Value.ToString();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
