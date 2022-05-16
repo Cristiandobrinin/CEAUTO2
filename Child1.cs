@@ -83,8 +83,14 @@ namespace CEAUTO2
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            string value = "";
-            value = dataGridView1.Rows[e.RowIndex].Cells[""].Value.ToString();
+            
+            textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells["serialDataGridViewTextBoxColumn"].Value.ToString();
+            textBox2.Text = dataGridView1.Rows[e.RowIndex].Cells["producerDataGridViewTextBoxColumn"].Value.ToString();
+            textBox3.Text = dataGridView1.Rows[e.RowIndex].Cells["modelDataGridViewTextBoxColumn"].Value.ToString();
+            textBox5.Text = dataGridView1.Rows[e.RowIndex].Cells["configDataGridViewTextBoxColumn"].Value.ToString();
+            textBox4.Text = dataGridView1.Rows[e.RowIndex].Cells["priceDataGridViewTextBoxColumn"].Value.ToString();
+           // comboBox1.SelectedText = dataGridView1.Rows[e.RowIndex].Cells["usedDataGridViewTextBoxColumn"].Value.ToString();  ###
+
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
