@@ -136,5 +136,8 @@
   <ItemGroup>
     <None Include="images\gradient.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="BD\TextFile1.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
