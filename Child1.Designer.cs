@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -56,7 +56,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -65,27 +64,29 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ceautoDataSet = new CEAUTO2.ceautoDataSet();
+            this.dealautoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.deal_autoTableAdapter = new CEAUTO2.ceautoDataSetTableAdapters.deal_autoTableAdapter();
             this.serialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.producerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.configDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dealautoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ceautoDataSet1 = new CEAUTO2.ceautoDataSet();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ceautoDataSet = new CEAUTO2.ceautoDataSet();
-            this.deal_autoTableAdapter = new CEAUTO2.ceautoDataSetTableAdapters.deal_autoTableAdapter();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_add.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dealautoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ceautoDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ceautoDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealautoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -149,6 +150,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "Modifica";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -211,6 +213,9 @@
             this.panel_add.AutoScroll = true;
             this.panel_add.AutoSize = true;
             this.panel_add.BackColor = System.Drawing.Color.White;
+            this.panel_add.Controls.Add(this.checkBox2);
+            this.panel_add.Controls.Add(this.label9);
+            this.panel_add.Controls.Add(this.numericUpDown1);
             this.panel_add.Controls.Add(this.textBox_ext);
             this.panel_add.Controls.Add(this.lab_ext);
             this.panel_add.Controls.Add(this.textBox_cut);
@@ -228,7 +233,6 @@
             this.panel_add.Controls.Add(this.panel2);
             this.panel_add.Controls.Add(this.comboBox1);
             this.panel_add.Controls.Add(this.textBox5);
-            this.panel_add.Controls.Add(this.textBox4);
             this.panel_add.Controls.Add(this.textBox3);
             this.panel_add.Controls.Add(this.textBox2);
             this.panel_add.Controls.Add(this.textBox1);
@@ -394,7 +398,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(426, 268);
+            this.checkBox1.Location = new System.Drawing.Point(224, 272);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(15, 14);
             this.checkBox1.TabIndex = 22;
@@ -404,7 +408,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(353, 269);
+            this.label8.Location = new System.Drawing.Point(245, 273);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(58, 13);
             this.label8.TabIndex = 21;
@@ -421,7 +425,6 @@
             // 
             // comboBox1
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Items.AddRange(new object[] {
             "yes",
             "no"});
@@ -437,13 +440,6 @@
             this.textBox5.Size = new System.Drawing.Size(226, 20);
             this.textBox5.TabIndex = 17;
             this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(224, 190);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(226, 20);
-            this.textBox4.TabIndex = 16;
             // 
             // textBox3
             // 
@@ -532,14 +528,14 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(96)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(96)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.serialDataGridViewTextBoxColumn,
@@ -559,6 +555,48 @@
             this.dataGridView1.Size = new System.Drawing.Size(671, 742);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(47, 78);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(98, 21);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Producator";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(47, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(139, 21);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Numarul de serie";
+            // 
+            // ceautoDataSet
+            // 
+            this.ceautoDataSet.DataSetName = "ceautoDataSet";
+            this.ceautoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dealautoBindingSource
+            // 
+            this.dealautoBindingSource.DataMember = "deal_auto";
+            this.dealautoBindingSource.DataSource = this.ceautoDataSet;
+            // 
+            // deal_autoTableAdapter
+            // 
+            this.deal_autoTableAdapter.ClearBeforeFill = true;
             // 
             // serialDataGridViewTextBoxColumn
             // 
@@ -602,52 +640,32 @@
             this.usedDataGridViewTextBoxColumn.Name = "usedDataGridViewTextBoxColumn";
             this.usedDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dealautoBindingSource
+            // numericUpDown1
             // 
-            this.dealautoBindingSource.DataMember = "deal_auto";
-            this.dealautoBindingSource.DataSource = this.ceautoDataSet1;
+            this.numericUpDown1.Location = new System.Drawing.Point(224, 190);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(226, 20);
+            this.numericUpDown1.TabIndex = 37;
             // 
-            // ceautoDataSet1
+            // checkBox2
             // 
-            this.ceautoDataSet1.DataSetName = "ceautoDataSet";
-            this.ceautoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(353, 272);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(15, 14);
+            this.checkBox2.TabIndex = 39;
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.Visible = false;
             // 
-            // label3
+            // label9
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(47, 78);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 21);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Producator";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(47, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 21);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Numarul de serie";
-            // 
-            // ceautoDataSet
-            // 
-            this.ceautoDataSet.DataSetName = "ceautoDataSet";
-            this.ceautoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // deal_autoTableAdapter
-            // 
-            this.deal_autoTableAdapter.ClearBeforeFill = true;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(374, 273);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 13);
+            this.label9.TabIndex = 38;
+            this.label9.Text = "Editeaza config";
+            this.label9.Visible = false;
             // 
             // Child1
             // 
@@ -669,9 +687,9 @@
             this.panel_add.ResumeLayout(false);
             this.panel_add.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dealautoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ceautoDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ceautoDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealautoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -685,11 +703,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private ceautoDataSet ceautoDataSet;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
@@ -709,21 +725,24 @@
         private System.Windows.Forms.Label lab_mot;
         private System.Windows.Forms.Label lab_col;
         private System.Windows.Forms.Label lab_con;
-        private ceautoDataSet ceautoDataSet1;
-        private System.Windows.Forms.BindingSource dealautoBindingSource;
-        private ceautoDataSetTableAdapters.deal_autoTableAdapter deal_autoTableAdapter;
         private System.Windows.Forms.TextBox textBox_ext;
         private System.Windows.Forms.Label lab_ext;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private ceautoDataSet ceautoDataSet;
+        private System.Windows.Forms.BindingSource dealautoBindingSource;
+        private ceautoDataSetTableAdapters.deal_autoTableAdapter deal_autoTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn serialDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn producerDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn modelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn configDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn usedDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Label label9;
     }
 }
