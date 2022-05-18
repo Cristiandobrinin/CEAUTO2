@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -39,6 +39,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_add = new System.Windows.Forms.Panel();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.textBox_ext = new System.Windows.Forms.TextBox();
             this.lab_ext = new System.Windows.Forms.Label();
             this.textBox_cut = new System.Windows.Forms.TextBox();
@@ -64,34 +67,35 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ceautoDataSet = new CEAUTO2.ceautoDataSet();
-            this.dealautoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.deal_autoTableAdapter = new CEAUTO2.ceautoDataSetTableAdapters.deal_autoTableAdapter();
             this.serialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.producerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.configDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.dealautoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ceautoDataSet = new CEAUTO2.ceautoDataSet();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.deal_autoTableAdapter = new CEAUTO2.ceautoDataSetTableAdapters.deal_autoTableAdapter();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_add.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ceautoDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dealautoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealautoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ceautoDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
@@ -119,7 +123,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click_1);
             // 
             // button3
             // 
@@ -135,6 +138,7 @@
             this.button3.TabIndex = 6;
             this.button3.Text = "Sterge";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -248,7 +252,43 @@
             this.panel_add.Name = "panel_add";
             this.panel_add.Size = new System.Drawing.Size(1161, 742);
             this.panel_add.TabIndex = 3;
-            this.panel_add.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_add_Paint);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(353, 272);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(15, 14);
+            this.checkBox2.TabIndex = 39;
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(374, 273);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 13);
+            this.label9.TabIndex = 38;
+            this.label9.Text = "Editeaza config";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.DecimalPlaces = 2;
+            this.numericUpDown1.Increment = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Location = new System.Drawing.Point(224, 190);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(226, 20);
+            this.numericUpDown1.TabIndex = 16;
             // 
             // textBox_ext
             // 
@@ -258,7 +298,6 @@
             this.textBox_ext.Size = new System.Drawing.Size(226, 20);
             this.textBox_ext.TabIndex = 36;
             this.textBox_ext.Visible = false;
-            this.textBox_ext.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
             // 
             // lab_ext
             // 
@@ -282,7 +321,6 @@
             this.textBox_cut.Size = new System.Drawing.Size(226, 20);
             this.textBox_cut.TabIndex = 32;
             this.textBox_cut.Visible = false;
-            this.textBox_cut.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // textBox_cor
             // 
@@ -291,7 +329,6 @@
             this.textBox_cor.Size = new System.Drawing.Size(226, 20);
             this.textBox_cor.TabIndex = 31;
             this.textBox_cor.Visible = false;
-            this.textBox_cor.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // textBox_mot
             // 
@@ -300,7 +337,6 @@
             this.textBox_mot.Size = new System.Drawing.Size(226, 20);
             this.textBox_mot.TabIndex = 30;
             this.textBox_mot.Visible = false;
-            this.textBox_mot.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // textBox_col
             // 
@@ -309,7 +345,6 @@
             this.textBox_col.Size = new System.Drawing.Size(226, 20);
             this.textBox_col.TabIndex = 29;
             this.textBox_col.Visible = false;
-            this.textBox_col.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // textBox_con
             // 
@@ -318,7 +353,6 @@
             this.textBox_con.Size = new System.Drawing.Size(226, 20);
             this.textBox_con.TabIndex = 28;
             this.textBox_con.Visible = false;
-            this.textBox_con.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
             // lab_cor
             // 
@@ -439,7 +473,6 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(226, 20);
             this.textBox5.TabIndex = 17;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox3
             // 
@@ -528,14 +561,14 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(96)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(96)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.serialDataGridViewTextBoxColumn,
@@ -555,48 +588,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(671, 742);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(47, 78);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 21);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Producator";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(47, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 21);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Numarul de serie";
-            // 
-            // ceautoDataSet
-            // 
-            this.ceautoDataSet.DataSetName = "ceautoDataSet";
-            this.ceautoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dealautoBindingSource
-            // 
-            this.dealautoBindingSource.DataMember = "deal_auto";
-            this.dealautoBindingSource.DataSource = this.ceautoDataSet;
-            // 
-            // deal_autoTableAdapter
-            // 
-            this.deal_autoTableAdapter.ClearBeforeFill = true;
             // 
             // serialDataGridViewTextBoxColumn
             // 
@@ -640,32 +631,79 @@
             this.usedDataGridViewTextBoxColumn.Name = "usedDataGridViewTextBoxColumn";
             this.usedDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // numericUpDown1
+            // dealautoBindingSource
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(224, 190);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(226, 20);
-            this.numericUpDown1.TabIndex = 37;
+            this.dealautoBindingSource.DataMember = "deal_auto";
+            this.dealautoBindingSource.DataSource = this.ceautoDataSet;
             // 
-            // checkBox2
+            // ceautoDataSet
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(353, 272);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 39;
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.Visible = false;
+            this.ceautoDataSet.DataSetName = "ceautoDataSet";
+            this.ceautoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label9
+            // label3
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(374, 273);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 13);
-            this.label9.TabIndex = 38;
-            this.label9.Text = "Editeaza config";
-            this.label9.Visible = false;
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(47, 78);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(98, 21);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Producator";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(47, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(139, 21);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Numarul de serie";
+            // 
+            // deal_autoTableAdapter
+            // 
+            this.deal_autoTableAdapter.ClearBeforeFill = true;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(3, 231);
+            this.button4.MaximumSize = new System.Drawing.Size(268, 50);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(118, 50);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "Reset";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(141, 231);
+            this.button5.MaximumSize = new System.Drawing.Size(268, 50);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(118, 50);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "Refresh";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Child1
             // 
@@ -686,10 +724,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_add.ResumeLayout(false);
             this.panel_add.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ceautoDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dealautoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealautoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ceautoDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -744,5 +782,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
     }
 }
