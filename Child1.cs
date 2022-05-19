@@ -66,6 +66,8 @@ namespace CEAUTO2
         
         private void Child1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'ceautoDataSet.conf_auto' table. You can move, or remove it, as needed.
+            this.conf_autoTableAdapter.Fill(this.ceautoDataSet.conf_auto);
             // TODO: This line of code loads data into the 'ceautoDataSet.deal_auto' table. You can move, or remove it, as needed.
             this.deal_autoTableAdapter.Fill(this.ceautoDataSet.deal_auto);
 
@@ -232,14 +234,38 @@ namespace CEAUTO2
 
             if (checkBox2.Checked)
             {
+                dataGridView2.Show();
+                dataGridView1.Hide();
+
+
                 swichconfshow();
                 checkBox1.Checked = false;
             }
             else
             {
+                dataGridView1.Show();
+                dataGridView2.Hide();
+
                 swichconfshow();
             }
 
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+
+
+                textBox_col.Text = dataGridView2.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn4"].Value.ToString().Trim();
+                textBox_con.Text = dataGridView2.Rows[e.RowIndex].Cells["color"].Value.ToString().Trim();
+                textBox_cor.Text = dataGridView2.Rows[e.RowIndex].Cells["body"].Value.ToString().Trim();
+                textBox_mot.Text = dataGridView2.Rows[e.RowIndex].Cells["engine"].Value.ToString().Trim();
+                textBox_cut.Text = dataGridView2.Rows[e.RowIndex].Cells["box"].Value.ToString().Trim();
+                textBox_ext.Text = dataGridView2.Rows[e.RowIndex].Cells["extras"].Value.ToString().Trim();
+              
+
+            }
         }
     }
 }

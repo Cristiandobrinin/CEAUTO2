@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
@@ -41,6 +42,15 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_add = new System.Windows.Forms.Panel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.color = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.engine = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.body = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.box = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.extras = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.confautoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ceautoDataSet = new CEAUTO2.ceautoDataSet();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -58,7 +68,6 @@
             this.lab_con = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -76,19 +85,21 @@
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dealautoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ceautoDataSet = new CEAUTO2.ceautoDataSet();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.deal_autoTableAdapter = new CEAUTO2.ceautoDataSetTableAdapters.deal_autoTableAdapter();
+            this.conf_autoTableAdapter = new CEAUTO2.ceautoDataSetTableAdapters.conf_autoTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_add.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.confautoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ceautoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealautoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ceautoDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -249,6 +260,7 @@
             this.panel_add.AutoScroll = true;
             this.panel_add.AutoSize = true;
             this.panel_add.BackColor = System.Drawing.Color.White;
+            this.panel_add.Controls.Add(this.dataGridView2);
             this.panel_add.Controls.Add(this.checkBox2);
             this.panel_add.Controls.Add(this.label9);
             this.panel_add.Controls.Add(this.numericUpDown1);
@@ -266,7 +278,6 @@
             this.panel_add.Controls.Add(this.lab_con);
             this.panel_add.Controls.Add(this.checkBox1);
             this.panel_add.Controls.Add(this.label8);
-            this.panel_add.Controls.Add(this.panel2);
             this.panel_add.Controls.Add(this.comboBox1);
             this.panel_add.Controls.Add(this.textBox5);
             this.panel_add.Controls.Add(this.textBox3);
@@ -284,6 +295,97 @@
             this.panel_add.Name = "panel_add";
             this.panel_add.Size = new System.Drawing.Size(1161, 742);
             this.panel_add.TabIndex = 3;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(96)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn4,
+            this.color,
+            this.engine,
+            this.body,
+            this.box,
+            this.extras});
+            this.dataGridView2.DataSource = this.confautoBindingSource;
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dataGridView2.GridColor = System.Drawing.Color.Black;
+            this.dataGridView2.Location = new System.Drawing.Point(454, 0);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.Size = new System.Drawing.Size(671, 725);
+            this.dataGridView2.TabIndex = 40;
+            this.dataGridView2.Visible = false;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "config";
+            this.dataGridViewTextBoxColumn4.HeaderText = "config";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // color
+            // 
+            this.color.DataPropertyName = "color";
+            this.color.HeaderText = "color";
+            this.color.Name = "color";
+            this.color.ReadOnly = true;
+            // 
+            // engine
+            // 
+            this.engine.DataPropertyName = "engine";
+            this.engine.HeaderText = "engine";
+            this.engine.Name = "engine";
+            this.engine.ReadOnly = true;
+            // 
+            // body
+            // 
+            this.body.DataPropertyName = "body";
+            this.body.HeaderText = "body";
+            this.body.Name = "body";
+            this.body.ReadOnly = true;
+            // 
+            // box
+            // 
+            this.box.DataPropertyName = "box";
+            this.box.HeaderText = "box";
+            this.box.Name = "box";
+            this.box.ReadOnly = true;
+            // 
+            // extras
+            // 
+            this.extras.DataPropertyName = "extras";
+            this.extras.HeaderText = "extras";
+            this.extras.Name = "extras";
+            this.extras.ReadOnly = true;
+            // 
+            // confautoBindingSource
+            // 
+            this.confautoBindingSource.DataMember = "conf_auto";
+            this.confautoBindingSource.DataSource = this.ceautoDataSet;
+            // 
+            // ceautoDataSet
+            // 
+            this.ceautoDataSet.DataSetName = "ceautoDataSet";
+            this.ceautoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // checkBox2
             // 
@@ -480,15 +582,6 @@
             this.label8.TabIndex = 21;
             this.label8.Text = "Config nou";
             // 
-            // panel2
-            // 
-            this.panel2.AutoSize = true;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(490, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(0, 742);
-            this.panel2.TabIndex = 20;
-            // 
             // comboBox1
             // 
             this.comboBox1.Items.AddRange(new object[] {
@@ -612,12 +705,12 @@
             this.dataGridView1.DataSource = this.dealautoBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Right;
             this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(490, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(1125, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(671, 742);
+            this.dataGridView1.Size = new System.Drawing.Size(671, 725);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -668,11 +761,6 @@
             this.dealautoBindingSource.DataMember = "deal_auto";
             this.dealautoBindingSource.DataSource = this.ceautoDataSet;
             // 
-            // ceautoDataSet
-            // 
-            this.ceautoDataSet.DataSetName = "ceautoDataSet";
-            this.ceautoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -705,6 +793,10 @@
             // 
             this.deal_autoTableAdapter.ClearBeforeFill = true;
             // 
+            // conf_autoTableAdapter
+            // 
+            this.conf_autoTableAdapter.ClearBeforeFill = true;
+            // 
             // Child1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -724,10 +816,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_add.ResumeLayout(false);
             this.panel_add.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.confautoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ceautoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealautoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ceautoDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -750,7 +844,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox_cut;
@@ -784,5 +877,14 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.BindingSource confautoBindingSource;
+        private ceautoDataSetTableAdapters.conf_autoTableAdapter conf_autoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn color;
+        private System.Windows.Forms.DataGridViewTextBoxColumn engine;
+        private System.Windows.Forms.DataGridViewTextBoxColumn body;
+        private System.Windows.Forms.DataGridViewTextBoxColumn box;
+        private System.Windows.Forms.DataGridViewTextBoxColumn extras;
     }
 }
