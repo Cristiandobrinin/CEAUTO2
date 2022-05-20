@@ -94,11 +94,25 @@
     <Compile Include="Child6.Designer.cs">
       <DependentUpon>Child6.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dealer.cs">
+      <DependentUpon>Dealer.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dealer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dealer.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainChild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainChild.Designer.cs">
+      <DependentUpon>MainChild.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -126,6 +140,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainChild.resx">
+      <DependentUpon>MainChild.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -146,6 +163,17 @@
     </None>
     <None Include="ceautoDataSet.xss">
       <DependentUpon>ceautoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Dealer.xsc">
+      <DependentUpon>Dealer.xsd</DependentUpon>
+    </None>
+    <None Include="Dealer.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dealer.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dealer.xss">
+      <DependentUpon>Dealer.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -180,6 +208,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="images\gradient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\dealerlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\delalog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\deallo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\clok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\contract.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\contractarenda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\empl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\client.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\pngwing.com %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\emp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\cli.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
