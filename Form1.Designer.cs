@@ -31,10 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-
-            this.login = new System.Windows.Forms.Button();
-            this.ChildFormPanel = new System.Windows.Forms.Panel();
-
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.button9 = new System.Windows.Forms.Button();
             this.button_menu = new System.Windows.Forms.Button();
@@ -52,9 +48,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button_edit_deal = new System.Windows.Forms.Button();
-
             this.ChildFormPanel = new System.Windows.Forms.Panel();
-
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -111,11 +105,13 @@
             // button9
             // 
             this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.button9.BackgroundImage = global::CEAUTO2.Properties.Resources.pngwing_com__1_;
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button9.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(89)))), ((int)(((byte)(89)))));
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.White;
@@ -123,8 +119,8 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(85, 49);
             this.button9.TabIndex = 15;
-            this.button9.Text = "Pagina\r\nPrincipala\r\n";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button_menu
             // 
@@ -161,66 +157,6 @@
             this.login.UseVisualStyleBackColor = false;
             this.login.Click += new System.EventHandler(this.button7_Click);
             // 
-
-            // ChildFormPanel
-            // 
-            this.ChildFormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ChildFormPanel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChildFormPanel.Location = new System.Drawing.Point(0, 49);
-            this.ChildFormPanel.Name = "ChildFormPanel";
-            this.ChildFormPanel.Size = new System.Drawing.Size(1434, 742);
-            this.ChildFormPanel.TabIndex = 2;
-            this.ChildFormPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ChildFormPanel_Paint);
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox8.Image = global::CEAUTO2.Properties.Resources.niceline;
-            this.pictureBox8.Location = new System.Drawing.Point(1107, 0);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(20, 49);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 16;
-            this.pictureBox8.TabStop = false;
-            // 
-            // button9
-            // 
-            this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.button9.BackgroundImage = global::CEAUTO2.Properties.Resources.pngwing_com__1_;
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(89)))), ((int)(((byte)(89)))));
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(1022, 0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(85, 49);
-            this.button9.TabIndex = 15;
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button_menu
-            // 
-            this.button_menu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.button_menu.BackgroundImage = global::CEAUTO2.Properties.Resources.Menuline2;
-            this.button_menu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_menu.FlatAppearance.BorderSize = 0;
-            this.button_menu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button_menu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_menu.Location = new System.Drawing.Point(321, 3);
-            this.button_menu.Name = "button_menu";
-            this.button_menu.Size = new System.Drawing.Size(51, 43);
-            this.button_menu.TabIndex = 14;
-            this.button_menu.UseVisualStyleBackColor = true;
-            // 
-
             // pictureBox7
             // 
             this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -238,17 +174,13 @@
             // button_cont_aren
             // 
             this.button_cont_aren.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-
             this.button_cont_aren.BackgroundImage = global::CEAUTO2.Properties.Resources.contractarenda;
             this.button_cont_aren.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-
             this.button_cont_aren.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_cont_aren.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button_cont_aren.FlatAppearance.BorderSize = 0;
             this.button_cont_aren.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-
             this.button_cont_aren.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(89)))), ((int)(((byte)(89)))));
-
             this.button_cont_aren.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_cont_aren.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_cont_aren.ForeColor = System.Drawing.Color.White;
@@ -256,8 +188,6 @@
             this.button_cont_aren.Name = "button_cont_aren";
             this.button_cont_aren.Size = new System.Drawing.Size(85, 49);
             this.button_cont_aren.TabIndex = 11;
-
-
             this.button_cont_aren.UseVisualStyleBackColor = true;
             this.button_cont_aren.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -278,17 +208,13 @@
             // button_cont_deal
             // 
             this.button_cont_deal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-
             this.button_cont_deal.BackgroundImage = global::CEAUTO2.Properties.Resources.contract;
             this.button_cont_deal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-
             this.button_cont_deal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_cont_deal.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button_cont_deal.FlatAppearance.BorderSize = 0;
             this.button_cont_deal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-
             this.button_cont_deal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(89)))), ((int)(((byte)(89)))));
-
             this.button_cont_deal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_cont_deal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_cont_deal.ForeColor = System.Drawing.Color.White;
@@ -296,7 +222,6 @@
             this.button_cont_deal.Name = "button_cont_deal";
             this.button_cont_deal.Size = new System.Drawing.Size(85, 49);
             this.button_cont_deal.TabIndex = 9;
-
             this.button_cont_deal.UseVisualStyleBackColor = true;
             this.button_cont_deal.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -317,17 +242,13 @@
             // button_client
             // 
             this.button_client.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-
             this.button_client.BackgroundImage = global::CEAUTO2.Properties.Resources.cli;
             this.button_client.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-
             this.button_client.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_client.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button_client.FlatAppearance.BorderSize = 0;
             this.button_client.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-
             this.button_client.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(89)))), ((int)(((byte)(89)))));
-
             this.button_client.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_client.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_client.ForeColor = System.Drawing.Color.White;
@@ -335,7 +256,6 @@
             this.button_client.Name = "button_client";
             this.button_client.Size = new System.Drawing.Size(85, 49);
             this.button_client.TabIndex = 7;
-
             this.button_client.UseVisualStyleBackColor = true;
             this.button_client.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -356,17 +276,13 @@
             // button_ang
             // 
             this.button_ang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-
             this.button_ang.BackgroundImage = global::CEAUTO2.Properties.Resources.emp;
             this.button_ang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-
             this.button_ang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_ang.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button_ang.FlatAppearance.BorderSize = 0;
             this.button_ang.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-
             this.button_ang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(89)))), ((int)(((byte)(89)))));
-
             this.button_ang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_ang.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_ang.ForeColor = System.Drawing.Color.White;
@@ -374,7 +290,6 @@
             this.button_ang.Name = "button_ang";
             this.button_ang.Size = new System.Drawing.Size(85, 49);
             this.button_ang.TabIndex = 5;
-
             this.button_ang.UseVisualStyleBackColor = true;
             this.button_ang.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -395,17 +310,13 @@
             // button_edit_aren
             // 
             this.button_edit_aren.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-
             this.button_edit_aren.BackgroundImage = global::CEAUTO2.Properties.Resources.clock;
             this.button_edit_aren.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-
             this.button_edit_aren.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_edit_aren.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button_edit_aren.FlatAppearance.BorderSize = 0;
             this.button_edit_aren.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-
             this.button_edit_aren.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(89)))), ((int)(((byte)(89)))));
-
             this.button_edit_aren.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_edit_aren.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_edit_aren.ForeColor = System.Drawing.Color.White;
@@ -413,7 +324,6 @@
             this.button_edit_aren.Name = "button_edit_aren";
             this.button_edit_aren.Size = new System.Drawing.Size(85, 49);
             this.button_edit_aren.TabIndex = 3;
-
             this.button_edit_aren.UseVisualStyleBackColor = true;
             this.button_edit_aren.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -446,7 +356,6 @@
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // button_edit_deal
-
             // 
             this.button_edit_deal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.button_edit_deal.BackgroundImage = global::CEAUTO2.Properties.Resources.deallo;
@@ -465,7 +374,16 @@
             this.button_edit_deal.TabIndex = 0;
             this.button_edit_deal.UseVisualStyleBackColor = true;
             this.button_edit_deal.Click += new System.EventHandler(this.button1_Click);
-
+            // 
+            // ChildFormPanel
+            // 
+            this.ChildFormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ChildFormPanel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChildFormPanel.Location = new System.Drawing.Point(0, 49);
+            this.ChildFormPanel.Name = "ChildFormPanel";
+            this.ChildFormPanel.Size = new System.Drawing.Size(1434, 742);
+            this.ChildFormPanel.TabIndex = 2;
+            this.ChildFormPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ChildFormPanel_Paint);
             // 
             // Form1
             // 
