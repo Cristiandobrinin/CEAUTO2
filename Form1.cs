@@ -21,7 +21,7 @@ namespace CEAUTO2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            OpenChildForm(new MainChild());
         }
         public bool formIsExist(Form frmOpen)
         {
@@ -138,6 +138,10 @@ namespace CEAUTO2
 
             auth.Show();
         }
-        
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new MainChild());
+        }
     }
 }
