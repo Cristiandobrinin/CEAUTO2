@@ -16,5 +16,31 @@ namespace CEAUTO2
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ////delete
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            ///delete
+        }
+
+        private void MainChild_Load(object sender, EventArgs e)
+        {
+            //delete
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
