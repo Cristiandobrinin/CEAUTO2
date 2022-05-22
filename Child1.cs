@@ -27,7 +27,7 @@ namespace CEAUTO2
 
         public Boolean LUCREAZA = true;
 
-        public Boolean canadd = true;
+     
 
         public bool checkconf()
         {
@@ -143,7 +143,7 @@ namespace CEAUTO2
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            canadd = false;
+           
 
             if (e.RowIndex >= 0)
             {
@@ -343,7 +343,7 @@ namespace CEAUTO2
 
             if (LUCREAZA)
             { 
-             canadd = true;
+            
 
             textBox1.Clear();
             textBox2.Clear();

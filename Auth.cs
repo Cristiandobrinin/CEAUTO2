@@ -70,7 +70,7 @@ namespace CEAUTO2
             //parola citita din textbox se incipteaza 
             password = sha256(textBox2.Text);
 
-            priv = "G1";
+          
 
 
          
@@ -88,17 +88,27 @@ namespace CEAUTO2
                 //#### Se poate de facut altfel
             DataTable dt = new DataTable();
             sdq.Fill(dt);
-            
+
+                
+                
             if(dt.Rows.Count > 0)
             {
  
 
                 MessageBox.Show("let's go");
-            
-            
-            }
+
+
+                    DataRow[] r = dt.Select();
+
+
+
+                   priv = (r[0][2].ToString());
+
+
+                }
                 else
-            { MessageBox.Show("let's gon't");
+            { 
+                    MessageBox.Show("let's gon't");
                 
             }
 
@@ -106,7 +116,7 @@ namespace CEAUTO2
             
 
         }
-        private void button2_Click(object sender, EventArgs e)
+        public void button2_Click(object sender, EventArgs e)
         {
 
             login = textBox1.Text;
@@ -141,6 +151,51 @@ namespace CEAUTO2
 
 
         }
+
+
+        public static Boolean User_priv_check(string requirements)
+        {
+
+            Boolean granted = false;
+            
+            switch (requirements)
+            {
+
+                case "G1":
+
+                    granted = true;
+                    break;
+
+                case "D1":
+
+                    if(requirements != "G1"||requirements != "A1")
+                    granted = true;
+                    break;
+
+                case "A1":
+                    if (requirements != "G1" || requirements != "D1")
+                        granted = true;
+                    break;
+
+                case "M1":
+                    if (requirements == "M1" || requirements == "C1")
+                        granted = true;
+                    break;
+
+                case "C1":
+                    if (requirements != "C1")
+                        granted = true;
+                    break;
+
+            }
+
+                
+
+            return granted;
+
+        }
+
+
 
     }
 }
