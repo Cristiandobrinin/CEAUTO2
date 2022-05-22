@@ -16,20 +16,23 @@ namespace CEAUTO2
     {
         public Auth()
         {
-            
+
             InitializeComponent();
 
             //Se ascund butuanele care raspund pentru functia de inregistrare
             textBox3.Hide(); label3.Hide(); button2.Hide();
-            
+
 
         }
-            //Connectiune sql cu informatia despre server si baza de date care v-a fi utilizata
-            SqlConnection sqlConnection = new SqlConnection("Server = REVISION-PC; Database=ceauto;Trusted_Connection=True;");
-            
-            //Instantierea la parametrii care vor fi folosite in logare si inregistrare
-            string login, password, priv;
+        //Connectiune sql cu informatia despre server si baza de date care v-a fi utilizata
+        SqlConnection sqlConnection = new SqlConnection("Server = REVISION-PC; Database=ceauto;Trusted_Connection=True;");
 
+
+            //Instantierea la parametrii care vor fi folosite in logare si inregistrare
+            string login, password, priv = "G1";
+
+            Boolean Logged = false;
+            
         private void Auth_Load(object sender, EventArgs e)
         {
 
@@ -71,7 +74,9 @@ namespace CEAUTO2
             password = sha256(textBox2.Text);
 
           
-
+            
+            
+            
 
          
             //Mesaj care v-a fi afisat in cauza daca utilizatorul nu a introdus nimic
@@ -93,7 +98,9 @@ namespace CEAUTO2
                 
             if(dt.Rows.Count > 0)
             {
- 
+
+
+                   
 
                 MessageBox.Show("let's go");
 
@@ -101,9 +108,11 @@ namespace CEAUTO2
                     DataRow[] r = dt.Select();
 
 
+                    Logged = true;
 
-                   priv = (r[0][2].ToString());
+                   priv = (r[0][2].ToString()).Trim();
 
+                    this.Hide();
 
                 }
                 else
@@ -153,11 +162,13 @@ namespace CEAUTO2
         }
 
 
-        public static Boolean User_priv_check(string requirements)
+        public Boolean User_priv_check(string requirements)
         {
 
-            Boolean granted = false;
             
+
+            Boolean granted = false;
+            if(Logged)
             switch (requirements)
             {
 
@@ -168,25 +179,32 @@ namespace CEAUTO2
 
                 case "D1":
 
-                    if(requirements != "G1"||requirements != "A1")
-                    granted = true;
+                    if(!String.Equals(priv, "G1") && !String.Equals(priv, "A1")) { granted = true; }
+
                     break;
 
                 case "A1":
-                    if (requirements != "G1" || requirements != "D1")
-                        granted = true;
+                    if (!String.Equals(priv,"G1") && !String.Equals(priv, "D1")) { granted = true; }
+                      
                     break;
 
                 case "M1":
-                    if (requirements == "M1" || requirements == "C1")
-                        granted = true;
-                    break;
+                    if (String.Equals(priv, "M1") | String.Equals(priv, "C1")) { granted = true; }
+                        break;
 
                 case "C1":
-                    if (requirements != "C1")
-                        granted = true;
-                    break;
+                    if (String.Equals(priv, "C1")) { granted = true; }
+                        break;
 
+                    default:
+
+                        granted = false;
+                        break;
+
+            }
+            else
+            {
+                MessageBox.Show("First login");
             }
 
                 

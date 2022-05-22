@@ -16,8 +16,14 @@ namespace CEAUTO2
         {
             InitializeComponent();
 
+
+
+
+
+
             this.IsMdiContainer = true;
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -115,9 +121,30 @@ namespace CEAUTO2
         
         private void button3_Click(object sender, EventArgs e)
         {
+            try
+            {
+                var authform = (Application.OpenForms.OfType<Auth>().Last());
+            
+                if (authform.User_priv_check("D1"))
+                {
+                    OpenChildForm(new Child3());
+                }
+                else
+                {
+                    MessageBox.Show("You have no power here ");
+                }
+            }
 
-            if)
-            OpenChildForm(new Child3());
+            catch (Exception ex)
+
+            {
+                MessageBox.Show("Ati outat sa va logati");
+            }
+
+
+
+          
+           
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
