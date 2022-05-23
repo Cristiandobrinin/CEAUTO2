@@ -60,7 +60,12 @@ namespace CEAUTO2
             }
             return hash;
         }
-        
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         //buttonul login va citi informatia din textbox-uri si le va atribui la variabile 
         private void button_login_Click(object sender, EventArgs e)
         {  
