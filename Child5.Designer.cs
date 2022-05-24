@@ -37,11 +37,11 @@
             this.lab_col = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.panel_child4 = new System.Windows.Forms.Panel();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -51,7 +51,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -61,21 +60,34 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idcontractDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idemplDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataintocmiriiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idcreditDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sumaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dealcontBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.deal_autoTableAdapter = new CEAUTO2.ceautoDataSetTableAdapters.deal_autoTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ceautoDataSet1 = new CEAUTO2.ceautoDataSet();
             this.dealautoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.deal_contTableAdapter = new CEAUTO2.ceautoDataSetTableAdapters.deal_contTableAdapter();
+            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ceautoDataSet)).BeginInit();
             this.panel_child4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealcontBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -131,11 +143,12 @@
             // 
             this.panel_child4.AutoSize = true;
             this.panel_child4.BackColor = System.Drawing.Color.White;
+            this.panel_child4.Controls.Add(this.dateTimePicker4);
+            this.panel_child4.Controls.Add(this.dateTimePicker3);
+            this.panel_child4.Controls.Add(this.dateTimePicker2);
+            this.panel_child4.Controls.Add(this.dateTimePicker1);
             this.panel_child4.Controls.Add(this.textBox6);
             this.panel_child4.Controls.Add(this.label7);
-            this.panel_child4.Controls.Add(this.textBox7);
-            this.panel_child4.Controls.Add(this.textBox8);
-            this.panel_child4.Controls.Add(this.textBox9);
             this.panel_child4.Controls.Add(this.textBox10);
             this.panel_child4.Controls.Add(this.textBox11);
             this.panel_child4.Controls.Add(this.label9);
@@ -148,7 +161,6 @@
             this.panel_child4.Controls.Add(this.textBox_col);
             this.panel_child4.Controls.Add(this.lab_col);
             this.panel_child4.Controls.Add(this.textBox5);
-            this.panel_child4.Controls.Add(this.textBox4);
             this.panel_child4.Controls.Add(this.textBox3);
             this.panel_child4.Controls.Add(this.textBox2);
             this.panel_child4.Controls.Add(this.textBox1);
@@ -163,6 +175,40 @@
             this.panel_child4.Name = "panel_child4";
             this.panel_child4.Size = new System.Drawing.Size(1161, 742);
             this.panel_child4.TabIndex = 27;
+            this.panel_child4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_child4_Paint);
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.CustomFormat = "";
+            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker3.Location = new System.Drawing.Point(213, 567);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(226, 20);
+            this.dateTimePicker3.TabIndex = 87;
+            this.dateTimePicker3.Value = new System.DateTime(2022, 5, 4, 0, 0, 0, 0);
+            this.dateTimePicker3.Visible = false;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CustomFormat = "";
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(213, 512);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(226, 20);
+            this.dateTimePicker2.TabIndex = 86;
+            this.dateTimePicker2.Value = new System.DateTime(2022, 5, 4, 0, 0, 0, 0);
+            this.dateTimePicker2.Visible = false;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(213, 459);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(226, 20);
+            this.dateTimePicker1.TabIndex = 85;
+            this.dateTimePicker1.Value = new System.DateTime(2022, 5, 4, 0, 0, 0, 0);
+            this.dateTimePicker1.Visible = false;
             // 
             // textBox6
             // 
@@ -187,33 +233,13 @@
             this.label7.Text = "Data scadentei";
             this.label7.Visible = false;
             // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(213, 565);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(226, 20);
-            this.textBox7.TabIndex = 82;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(213, 512);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(226, 20);
-            this.textBox8.TabIndex = 81;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(213, 459);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(226, 20);
-            this.textBox9.TabIndex = 80;
-            // 
             // textBox10
             // 
             this.textBox10.Location = new System.Drawing.Point(213, 406);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(226, 20);
             this.textBox10.TabIndex = 79;
+            this.textBox10.Visible = false;
             // 
             // textBox11
             // 
@@ -221,6 +247,7 @@
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(226, 20);
             this.textBox11.TabIndex = 78;
+            this.textBox11.Visible = false;
             // 
             // label9
             // 
@@ -235,6 +262,7 @@
             this.label9.Size = new System.Drawing.Size(161, 21);
             this.label9.TabIndex = 77;
             this.label9.Text = "Suma spre achitare";
+            this.label9.Visible = false;
             // 
             // label10
             // 
@@ -249,6 +277,7 @@
             this.label10.Size = new System.Drawing.Size(174, 21);
             this.label10.TabIndex = 76;
             this.label10.Text = "Data intocmirii credit";
+            this.label10.Visible = false;
             // 
             // label11
             // 
@@ -263,6 +292,7 @@
             this.label11.Size = new System.Drawing.Size(128, 21);
             this.label11.TabIndex = 75;
             this.label11.Text = "Suma achitata";
+            this.label11.Visible = false;
             // 
             // label12
             // 
@@ -277,6 +307,7 @@
             this.label12.Size = new System.Drawing.Size(44, 21);
             this.label12.TabIndex = 74;
             this.label12.Text = "DAE";
+            this.label12.Visible = false;
             // 
             // label13
             // 
@@ -291,11 +322,12 @@
             this.label13.Size = new System.Drawing.Size(61, 21);
             this.label13.TabIndex = 73;
             this.label13.Text = "Banca";
+            this.label13.Visible = false;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(350, 320);
+            this.label8.Location = new System.Drawing.Point(234, 269);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(34, 13);
             this.label8.TabIndex = 72;
@@ -304,18 +336,12 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(414, 319);
+            this.checkBox1.Location = new System.Drawing.Point(213, 268);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(15, 14);
             this.checkBox1.TabIndex = 71;
             this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(213, 184);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(226, 20);
-            this.textBox4.TabIndex = 65;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // textBox3
             // 
@@ -415,6 +441,7 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -429,6 +456,15 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idcontractDataGridViewTextBoxColumn,
+            this.idclientDataGridViewTextBoxColumn,
+            this.serialDataGridViewTextBoxColumn,
+            this.idemplDataGridViewTextBoxColumn,
+            this.dataintocmiriiDataGridViewTextBoxColumn,
+            this.idcreditDataGridViewTextBoxColumn,
+            this.sumaDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.dealcontBindingSource;
             this.dataGridView1.GridColor = System.Drawing.Color.Black;
             this.dataGridView1.Location = new System.Drawing.Point(461, 0);
             this.dataGridView1.Name = "dataGridView1";
@@ -437,6 +473,61 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(700, 742);
             this.dataGridView1.TabIndex = 22;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // idcontractDataGridViewTextBoxColumn
+            // 
+            this.idcontractDataGridViewTextBoxColumn.DataPropertyName = "id_contract";
+            this.idcontractDataGridViewTextBoxColumn.HeaderText = "id_contract";
+            this.idcontractDataGridViewTextBoxColumn.Name = "idcontractDataGridViewTextBoxColumn";
+            this.idcontractDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idclientDataGridViewTextBoxColumn
+            // 
+            this.idclientDataGridViewTextBoxColumn.DataPropertyName = "id_client";
+            this.idclientDataGridViewTextBoxColumn.HeaderText = "id_client";
+            this.idclientDataGridViewTextBoxColumn.Name = "idclientDataGridViewTextBoxColumn";
+            this.idclientDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // serialDataGridViewTextBoxColumn
+            // 
+            this.serialDataGridViewTextBoxColumn.DataPropertyName = "serial";
+            this.serialDataGridViewTextBoxColumn.HeaderText = "serial";
+            this.serialDataGridViewTextBoxColumn.Name = "serialDataGridViewTextBoxColumn";
+            this.serialDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idemplDataGridViewTextBoxColumn
+            // 
+            this.idemplDataGridViewTextBoxColumn.DataPropertyName = "id_empl";
+            this.idemplDataGridViewTextBoxColumn.HeaderText = "id_empl";
+            this.idemplDataGridViewTextBoxColumn.Name = "idemplDataGridViewTextBoxColumn";
+            this.idemplDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataintocmiriiDataGridViewTextBoxColumn
+            // 
+            this.dataintocmiriiDataGridViewTextBoxColumn.DataPropertyName = "data_intocmirii";
+            this.dataintocmiriiDataGridViewTextBoxColumn.HeaderText = "data_intocmirii";
+            this.dataintocmiriiDataGridViewTextBoxColumn.Name = "dataintocmiriiDataGridViewTextBoxColumn";
+            this.dataintocmiriiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idcreditDataGridViewTextBoxColumn
+            // 
+            this.idcreditDataGridViewTextBoxColumn.DataPropertyName = "id_credit";
+            this.idcreditDataGridViewTextBoxColumn.HeaderText = "id_credit";
+            this.idcreditDataGridViewTextBoxColumn.Name = "idcreditDataGridViewTextBoxColumn";
+            this.idcreditDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sumaDataGridViewTextBoxColumn
+            // 
+            this.sumaDataGridViewTextBoxColumn.DataPropertyName = "suma";
+            this.sumaDataGridViewTextBoxColumn.HeaderText = "suma";
+            this.sumaDataGridViewTextBoxColumn.Name = "sumaDataGridViewTextBoxColumn";
+            this.sumaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dealcontBindingSource
+            // 
+            this.dealcontBindingSource.DataMember = "deal_cont";
+            this.dealcontBindingSource.DataSource = this.ceautoDataSet;
             // 
             // label2
             // 
@@ -457,8 +548,9 @@
             // 
             // panel1
             // 
-            this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
@@ -471,49 +563,36 @@
             this.panel1.Size = new System.Drawing.Size(273, 742);
             this.panel1.TabIndex = 25;
             // 
-            // pictureBox2
+            // button5
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox2.Image = global::CEAUTO2.Properties.Resources.niceline2;
-            this.pictureBox2.Location = new System.Drawing.Point(-1, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(271, 10);
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(141, 231);
+            this.button5.MaximumSize = new System.Drawing.Size(268, 50);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(118, 50);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "Refresh";
+            this.button5.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // button4
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = global::CEAUTO2.Properties.Resources.long_line2;
-            this.pictureBox1.Location = new System.Drawing.Point(265, -3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(8, 742);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // ceautoDataSet1
-            // 
-            this.ceautoDataSet1.DataSetName = "ceautoDataSet";
-            this.ceautoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dealautoBindingSource
-            // 
-            this.dealautoBindingSource.DataMember = "deal_auto";
-            this.dealautoBindingSource.DataSource = this.ceautoDataSet1;
-            // 
-            // panel2
-            // 
-            this.panel2.AutoSize = true;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1434, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(0, 742);
-            this.panel2.TabIndex = 26;
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(3, 231);
+            this.button4.MaximumSize = new System.Drawing.Size(268, 50);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(118, 50);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "Reset";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -559,6 +638,65 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Adauga";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox2.Image = global::CEAUTO2.Properties.Resources.niceline2;
+            this.pictureBox2.Location = new System.Drawing.Point(-1, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(271, 10);
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Image = global::CEAUTO2.Properties.Resources.long_line2;
+            this.pictureBox1.Location = new System.Drawing.Point(265, -3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(8, 742);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // ceautoDataSet1
+            // 
+            this.ceautoDataSet1.DataSetName = "ceautoDataSet";
+            this.ceautoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dealautoBindingSource
+            // 
+            this.dealautoBindingSource.DataMember = "deal_auto";
+            this.dealautoBindingSource.DataSource = this.ceautoDataSet1;
+            // 
+            // panel2
+            // 
+            this.panel2.AutoSize = true;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(1434, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(0, 742);
+            this.panel2.TabIndex = 26;
+            // 
+            // deal_contTableAdapter
+            // 
+            this.deal_contTableAdapter.ClearBeforeFill = true;
+            // 
+            // dateTimePicker4
+            // 
+            this.dateTimePicker4.CustomFormat = "";
+            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker4.Location = new System.Drawing.Point(213, 191);
+            this.dateTimePicker4.Name = "dateTimePicker4";
+            this.dateTimePicker4.Size = new System.Drawing.Size(226, 20);
+            this.dateTimePicker4.TabIndex = 88;
+            this.dateTimePicker4.Value = new System.DateTime(2022, 5, 4, 0, 0, 0, 0);
             // 
             // Child5
             // 
@@ -570,11 +708,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Child5";
             this.Text = "Child5";
+            this.Load += new System.EventHandler(this.Child5_Load);
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ceautoDataSet)).EndInit();
             this.panel_child4.ResumeLayout(false);
             this.panel_child4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dealcontBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -594,7 +734,6 @@
         private System.Windows.Forms.Label lab_col;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Panel panel_child4;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
@@ -615,9 +754,6 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label9;
@@ -629,5 +765,20 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.BindingSource dealcontBindingSource;
+        private ceautoDataSetTableAdapters.deal_contTableAdapter deal_contTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idcontractDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idclientDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serialDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idemplDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataintocmiriiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idcreditDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sumaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker4;
     }
 }

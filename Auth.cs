@@ -177,6 +177,12 @@ namespace CEAUTO2
                     granted = true;
                     break;
 
+                case "Ang":
+
+                    if (String.Equals(priv, "A1") | String.Equals(priv, "M1") | String.Equals(priv, "C1"))
+                    { granted = true;}
+                    break;
+
                 case "D1":
 
                     if(!String.Equals(priv, "G1") && !String.Equals(priv, "A1")) { granted = true; }
@@ -201,10 +207,6 @@ namespace CEAUTO2
                         granted = false;
                         break;
 
-            }
-            else
-            {
-                MessageBox.Show("First login");
             }
 
                 

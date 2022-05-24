@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 namespace CEAUTO2
 {
+
+
     public partial class Child1 : Form
     {
         public Child1()
@@ -22,7 +24,7 @@ namespace CEAUTO2
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            //sterge nahui
+          
         }
 
         public Boolean LUCREAZA = true;
