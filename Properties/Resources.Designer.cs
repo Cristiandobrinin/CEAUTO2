@@ -63,6 +63,16 @@ namespace CEAUTO2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap adimin {
+            get {
+                object obj = ResourceManager.GetObject("adimin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap big_square {
             get {
                 object obj = ResourceManager.GetObject("big square", resourceCulture);
