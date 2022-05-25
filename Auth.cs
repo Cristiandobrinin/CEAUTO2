@@ -16,20 +16,23 @@ namespace CEAUTO2
     {
         public Auth()
         {
-            
+
             InitializeComponent();
 
             //Se ascund butuanele care raspund pentru functia de inregistrare
             textBox3.Hide(); label3.Hide(); button2.Hide();
-            
+
 
         }
-            //Connectiune sql cu informatia despre server si baza de date care v-a fi utilizata
-            SqlConnection sqlConnection = new SqlConnection("Server = REVISION-PC; Database=ceauto;Trusted_Connection=True;");
-            
-            //Instantierea la parametrii care vor fi folosite in logare si inregistrare
-            string login, password, priv;
+        //Connectiune sql cu informatia despre server si baza de date care v-a fi utilizata
+        SqlConnection sqlConnection = new SqlConnection("Server = REVISION-PC; Database=ceauto;Trusted_Connection=True;");
 
+
+            //Instantierea la parametrii care vor fi folosite in logare si inregistrare
+            string login, password, priv = "G1";
+
+            Boolean Logged = false;
+            
         private void Auth_Load(object sender, EventArgs e)
         {
 
@@ -75,8 +78,10 @@ namespace CEAUTO2
             //parola citita din textbox se incipteaza 
             password = sha256(textBox2.Text);
 
-            priv = "G1";
-
+          
+            
+            
+            
 
          
             //Mesaj care v-a fi afisat in cauza daca utilizatorul nu a introdus nimic
@@ -93,17 +98,31 @@ namespace CEAUTO2
                 //#### Se poate de facut altfel
             DataTable dt = new DataTable();
             sdq.Fill(dt);
-            
+
+                
+                
             if(dt.Rows.Count > 0)
             {
- 
+
+
+                   
 
                 MessageBox.Show("let's go");
-            
-            
-            }
+
+
+                    DataRow[] r = dt.Select();
+
+
+                    Logged = true;
+
+                   priv = (r[0][2].ToString()).Trim();
+
+                    this.Hide();
+
+                }
                 else
-            { MessageBox.Show("let's gon't");
+            { 
+                    MessageBox.Show("let's gon't");
                 
             }
 
@@ -111,7 +130,7 @@ namespace CEAUTO2
             
 
         }
-        private void button2_Click(object sender, EventArgs e)
+        public void button2_Click(object sender, EventArgs e)
         {
 
             login = textBox1.Text;
@@ -146,6 +165,62 @@ namespace CEAUTO2
 
 
         }
+
+
+        public Boolean User_priv_check(string requirements)
+        {
+
+            
+
+            Boolean granted = false;
+            if(Logged)
+            switch (requirements)
+            {
+
+                case "G1":
+
+                    granted = true;
+                    break;
+
+                case "Ang":
+
+                    if (String.Equals(priv, "A1") | String.Equals(priv, "M1") | String.Equals(priv, "C1"))
+                    { granted = true;}
+                    break;
+
+                case "D1":
+
+                    if(!String.Equals(priv, "G1") && !String.Equals(priv, "A1")) { granted = true; }
+
+                    break;
+
+                case "A1":
+                    if (!String.Equals(priv,"G1") && !String.Equals(priv, "D1")) { granted = true; }
+                      
+                    break;
+
+                case "M1":
+                    if (String.Equals(priv, "M1") | String.Equals(priv, "C1")) { granted = true; }
+                        break;
+
+                case "C1":
+                    if (String.Equals(priv, "C1")) { granted = true; }
+                        break;
+
+                    default:
+
+                        granted = false;
+                        break;
+
+            }
+
+                
+
+            return granted;
+
+        }
+
+
 
     }
 }

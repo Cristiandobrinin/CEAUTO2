@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 namespace CEAUTO2
 {
+
+
     public partial class Child1 : Form
     {
         public Child1()
@@ -22,12 +24,12 @@ namespace CEAUTO2
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            //sterge nahui
+          
         }
 
         public Boolean LUCREAZA = true;
 
-        public Boolean canadd = true;
+     
 
         public bool checkconf()
         {
@@ -143,7 +145,7 @@ namespace CEAUTO2
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            canadd = false;
+           
 
             if (e.RowIndex >= 0)
             {
@@ -343,7 +345,7 @@ namespace CEAUTO2
 
             if (LUCREAZA)
             { 
-             canadd = true;
+            
 
             textBox1.Clear();
             textBox2.Clear();

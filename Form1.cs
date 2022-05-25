@@ -16,8 +16,14 @@ namespace CEAUTO2
         {
             InitializeComponent();
 
+
+
+
+
+
             this.IsMdiContainer = true;
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -52,39 +58,50 @@ namespace CEAUTO2
             childForm.Show();
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Child2());
-        }
+            try
+            {
+                var authform = (Application.OpenForms.OfType<Auth>().Last());
 
-        private void ChildFormPanel_Paint(object sender, PaintEventArgs e)
-        {
+                if (authform.User_priv_check("G1"))
+                {
+                    OpenChildForm(new Child2());
+                }
+                else
+                {
+                    MessageBox.Show("Insufciente permisiuni.");
+                }
+            }
 
-        }
+            catch (Exception ex)
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-
+            {
+                MessageBox.Show("Logativa!");
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Child6());
+            try
+            {
+                var authform = (Application.OpenForms.OfType<Auth>().Last());
+
+                if (authform.User_priv_check("A1"))
+                {
+                    OpenChildForm(new Child6());
+                }
+                else
+                {
+                    MessageBox.Show("Insufciente permisiuni.");
+                }
+            }
+
+            catch (Exception ex)
+
+            {
+                MessageBox.Show("Logativa!");
+            }
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
@@ -94,42 +111,99 @@ namespace CEAUTO2
 
         private void button5_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Child5());
-        }
+            try
+            {
+                var authform = (Application.OpenForms.OfType<Auth>().Last());
 
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
+                if (authform.User_priv_check("D1"))
+                {
+                    OpenChildForm(new Child5());
+                }
+                else
+                {
+                    MessageBox.Show("Insufciente permisiuni.");
+                }
+            }
 
+            catch (Exception ex)
+
+            {
+                MessageBox.Show("Logativa!");
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Child4());
+            try
+            {
+                var authform = (Application.OpenForms.OfType<Auth>().Last());
+
+                if (authform.User_priv_check("Ang"))
+                {
+                    OpenChildForm(new Child4());
+                }
+                else
+                {
+                    MessageBox.Show("Insufciente permisiuni.");
+                }
+            }
+
+            catch (Exception ex)
+
+            {
+                MessageBox.Show("Logativa!");
+            }
         }
-
-        private void pictureBox3_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
+    
         private void button3_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Child3());
-        }
+            try
+            {
+                var authform = (Application.OpenForms.OfType<Auth>().Last());
+            
+                if (authform.User_priv_check("M1"))
+                {
+                    OpenChildForm(new Child3());
+                }
+                else
+                {
+                    MessageBox.Show("Insufciente permisiuni.");
+                }
+            }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
+            catch (Exception ex)
 
-        }
+            {
+                MessageBox.Show("Logativa!");
+            }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
 
+
+          
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Child1());
+            try
+            {
+                var authform = (Application.OpenForms.OfType<Auth>().Last());
+
+                if (authform.User_priv_check("G1"))
+                {
+                    OpenChildForm(new Child1());
+                }
+                else
+                {
+                    MessageBox.Show("Insufciente permisiuni.");
+                }
+            }
+
+            catch (Exception ex)
+
+            {
+                MessageBox.Show("Logativa!");
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
