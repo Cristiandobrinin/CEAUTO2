@@ -16,6 +16,7 @@ namespace CEAUTO2
 
         SqlConnection sqlConnection = new SqlConnection("Server = REVISION-PC; Database=ceauto;Trusted_Connection=True;");
 
+        public string idcurent;
         public Child5()
         {
             InitializeComponent();
@@ -51,7 +52,11 @@ namespace CEAUTO2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string edit_d = "exec addcont '" + textBox1.Text + "','" + textBox3.Text + "','" + textBox2.Text + "', '" + dateTimePicker4.Value.Date.ToString().Trim() + "','null','"+textBox5.Text+ ",";
+
+            string indate = (dateTimePicker4.Value.Date).ToString("yyyyMMdd");
+
+
+            string edit_d = "exec addcont '" + textBox1.Text + "','" + textBox3.Text + "','" + textBox2.Text + "','" + indate + "',null,'"+textBox5.Text+ "'";
             SqlCommand edit_q = new SqlCommand(edit_d, sqlConnection);
 
             try
@@ -63,7 +68,7 @@ namespace CEAUTO2
             }
             catch (Exception ex)
             {
-                MessageBox.Show("eroare");
+                MessageBox.Show("eroare "+indate+" : " + ex.Message ) ;
             }
             finally
             {
@@ -79,7 +84,7 @@ namespace CEAUTO2
         {
             if (e.RowIndex >= 0)
             {
-
+                idcurent = dataGridView1.Rows[e.RowIndex].Cells["idcontractDataGridViewTextBoxColumn"].Value.ToString().Trim() ;
 
                 textBox2.Text = dataGridView1.Rows[e.RowIndex].Cells["idemplDataGridViewTextBoxColumn"].Value.ToString().Trim();
                 textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells["idclientDataGridViewTextBoxColumn"].Value.ToString().Trim();
@@ -87,8 +92,66 @@ namespace CEAUTO2
                 dateTimePicker4.Text = dataGridView1.Rows[e.RowIndex].Cells["dataintocmiriiDataGridViewTextBoxColumn"].Value.ToString() ;
                 textBox5.Text = dataGridView1.Rows[e.RowIndex].Cells["sumaDataGridViewTextBoxColumn"].Value.ToString().Trim();
 
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.deal_contTableAdapter.Fill(this.ceautoDataSet.deal_cont);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string indate = (dateTimePicker4.Value.Date).ToString("dd/MM/yyyy");
+
+
+            string edit_d = "exec editcont '"+ idcurent +"','" + textBox1.Text + "','" + textBox3.Text + "','" + textBox2.Text + "','" + indate + "',null,'" + textBox5.Text + "'";
+            SqlCommand edit_q = new SqlCommand(edit_d, sqlConnection);
+
+            try
+            {
+
+                sqlConnection.Open();
+                edit_q.ExecuteNonQuery();
 
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("eroare : " + ex.Message);
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
+
+            button5.PerformClick();
+            button4.PerformClick();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            string edit_d = "exec rmcont '" + idcurent + "'";
+            SqlCommand edit_q = new SqlCommand(edit_d, sqlConnection);
+
+            try
+            {
+
+                sqlConnection.Open();
+                edit_q.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("eroare : " + ex.Message);
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
+
+            button5.PerformClick();
+            button4.PerformClick();
         }
     }
 }
