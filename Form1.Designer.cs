@@ -31,13 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.login = new System.Windows.Forms.Button();
-            this.ChildFormPanel = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.button9 = new System.Windows.Forms.Button();
             this.button_menu = new System.Windows.Forms.Button();
+            this.login = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.button_cont_aren = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -51,6 +50,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button_edit_deal = new System.Windows.Forms.Button();
+            this.ChildFormPanel = new System.Windows.Forms.Panel();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -68,10 +68,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.pictureBox9);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.pictureBox8);
-            this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.button_menu);
             this.panel1.Controls.Add(this.login);
             this.panel1.Controls.Add(this.pictureBox7);
@@ -92,36 +92,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1434, 49);
             this.panel1.TabIndex = 1;
-            // 
-            // login
-            // 
-            this.login.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.login.BackColor = System.Drawing.SystemColors.Window;
-            this.login.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.login.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.login.FlatAppearance.BorderSize = 0;
-            this.login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(89)))), ((int)(((byte)(89)))));
-            this.login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.login.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login.ForeColor = System.Drawing.Color.Black;
-            this.login.Location = new System.Drawing.Point(1341, 9);
-            this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(81, 31);
-            this.login.TabIndex = 13;
-            this.login.Text = "Logare";
-            this.login.UseVisualStyleBackColor = false;
-            this.login.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // ChildFormPanel
-            // 
-            this.ChildFormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ChildFormPanel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChildFormPanel.Location = new System.Drawing.Point(0, 49);
-            this.ChildFormPanel.Name = "ChildFormPanel";
-            this.ChildFormPanel.Size = new System.Drawing.Size(1434, 742);
-            this.ChildFormPanel.TabIndex = 2;
-            this.ChildFormPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ChildFormPanel_Paint);
             // 
             // pictureBox9
             // 
@@ -182,7 +152,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(960, 1);
+            this.button9.Location = new System.Drawing.Point(336, -2);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(85, 49);
             this.button9.TabIndex = 15;
@@ -203,6 +173,26 @@
             this.button_menu.Size = new System.Drawing.Size(51, 43);
             this.button_menu.TabIndex = 14;
             this.button_menu.UseVisualStyleBackColor = true;
+            // 
+            // login
+            // 
+            this.login.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.login.BackColor = System.Drawing.SystemColors.Window;
+            this.login.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.login.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.login.FlatAppearance.BorderSize = 0;
+            this.login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(89)))), ((int)(((byte)(89)))));
+            this.login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.login.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login.ForeColor = System.Drawing.Color.Black;
+            this.login.Location = new System.Drawing.Point(1341, 9);
+            this.login.Name = "login";
+            this.login.Size = new System.Drawing.Size(81, 31);
+            this.login.TabIndex = 13;
+            this.login.Text = "Logare";
+            this.login.UseVisualStyleBackColor = false;
+            this.login.Click += new System.EventHandler(this.button7_Click);
             // 
             // pictureBox7
             // 
@@ -230,7 +220,7 @@
             this.button_cont_aren.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_cont_aren.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_cont_aren.ForeColor = System.Drawing.Color.White;
-            this.button_cont_aren.Location = new System.Drawing.Point(855, 1);
+            this.button_cont_aren.Location = new System.Drawing.Point(852, 1);
             this.button_cont_aren.Name = "button_cont_aren";
             this.button_cont_aren.Size = new System.Drawing.Size(85, 49);
             this.button_cont_aren.TabIndex = 11;
@@ -264,7 +254,7 @@
             this.button_cont_deal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_cont_deal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_cont_deal.ForeColor = System.Drawing.Color.White;
-            this.button_cont_deal.Location = new System.Drawing.Point(750, 1);
+            this.button_cont_deal.Location = new System.Drawing.Point(755, 1);
             this.button_cont_deal.Name = "button_cont_deal";
             this.button_cont_deal.Size = new System.Drawing.Size(85, 49);
             this.button_cont_deal.TabIndex = 9;
@@ -330,7 +320,7 @@
             this.button_ang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_ang.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_ang.ForeColor = System.Drawing.Color.White;
-            this.button_ang.Location = new System.Drawing.Point(540, 1);
+            this.button_ang.Location = new System.Drawing.Point(966, 0);
             this.button_ang.Name = "button_ang";
             this.button_ang.Size = new System.Drawing.Size(85, 49);
             this.button_ang.TabIndex = 5;
@@ -363,7 +353,7 @@
             this.button_edit_aren.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_edit_aren.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_edit_aren.ForeColor = System.Drawing.Color.White;
-            this.button_edit_aren.Location = new System.Drawing.Point(435, 1);
+            this.button_edit_aren.Location = new System.Drawing.Point(534, 1);
             this.button_edit_aren.Name = "button_edit_aren";
             this.button_edit_aren.Size = new System.Drawing.Size(85, 49);
             this.button_edit_aren.TabIndex = 3;
@@ -409,15 +399,14 @@
             this.button_edit_deal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_edit_deal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_edit_deal.ForeColor = System.Drawing.Color.White;
-            this.button_edit_deal.Location = new System.Drawing.Point(330, 1);
+            this.button_edit_deal.Location = new System.Drawing.Point(440, 2);
             this.button_edit_deal.Name = "button_edit_deal";
             this.button_edit_deal.Size = new System.Drawing.Size(85, 49);
             this.button_edit_deal.TabIndex = 0;
             this.button_edit_deal.UseVisualStyleBackColor = true;
             this.button_edit_deal.Click += new System.EventHandler(this.button1_Click);
             // 
-
-            // ChildFormPanel  TTTTT
+            // ChildFormPanel
             // 
             this.ChildFormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ChildFormPanel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -426,7 +415,6 @@
             this.ChildFormPanel.Size = new System.Drawing.Size(1434, 742);
             this.ChildFormPanel.TabIndex = 2;
             // 
-
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
