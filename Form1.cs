@@ -217,5 +217,10 @@ namespace CEAUTO2
         {
             OpenChildForm(new MainChild());
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new Administration());
+        }
     }
 }
