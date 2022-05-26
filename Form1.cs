@@ -211,6 +211,8 @@ namespace CEAUTO2
             Auth auth = new Auth();
 
             auth.Show();
+            
+
         }
 
         private void button9_Click(object sender, EventArgs e)
