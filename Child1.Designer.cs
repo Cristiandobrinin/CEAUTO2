@@ -42,7 +42,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-           
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -135,16 +135,14 @@
             // 
             // panel2
             // 
-            this.panel2.AutoSize = true;
             this.panel2.Controls.Add(this.button9);
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.button10);
             this.panel2.Controls.Add(this.button8);
             this.panel2.Controls.Add(this.button7);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(477, 0);
+            this.panel2.Location = new System.Drawing.Point(0, 414);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(0, 742);
+            this.panel2.Size = new System.Drawing.Size(267, 308);
             this.panel2.TabIndex = 20;
             this.panel2.Visible = false;
             // 
