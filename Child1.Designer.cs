@@ -138,15 +138,19 @@
             // 
             // panel2
             // 
+
             this.panel2.Controls.Add(this.button11);
+
             this.panel2.Controls.Add(this.button9);
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.button10);
             this.panel2.Controls.Add(this.button8);
             this.panel2.Controls.Add(this.button7);
+
             this.panel2.Location = new System.Drawing.Point(3, 414);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(264, 305);
+
             this.panel2.TabIndex = 20;
             this.panel2.Visible = false;
             // 
