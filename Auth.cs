@@ -125,6 +125,13 @@ namespace CEAUTO2
             
 
         }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)13)
+            { button_login.PerformClick();}
+        }
+
         public void button2_Click(object sender, EventArgs e)
         {
 

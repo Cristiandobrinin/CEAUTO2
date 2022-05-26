@@ -216,6 +216,7 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
+            "Oaspete",
             "Angajat Dealer",
             "Angajat Arenda",
             "Manager"});

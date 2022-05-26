@@ -62,6 +62,9 @@ namespace CEAUTO2
                     return "M1";
                     break;
 
+                case "Oaspete":
+                    return "G1";
+                    break;
                 default:
 
                     MessageBox.Show("Privilegii invalide");
@@ -94,7 +97,12 @@ namespace CEAUTO2
                         return "Manager";
                         break;
 
-                    default:
+                     case "G1":
+
+                    return "Oaspete";
+                    break;
+
+                default:
 
                         MessageBox.Show("Privilegii invalide");
 
@@ -115,7 +123,7 @@ namespace CEAUTO2
             string password = sha256(textBox2.Text);
             string priv = toserv();
 
-            string addacc = "exec editlogin '" + login + "','" + password + "', '" + priv + "'";
+            string addacc = "exec editpriv '" + login + "','" + password + "', '" + priv + "'";
 
             SqlCommand addacc_q = new SqlCommand(addacc, sqlConnection);
 
