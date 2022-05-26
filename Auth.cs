@@ -105,11 +105,6 @@ namespace CEAUTO2
             {
 
 
-                   
-
-                MessageBox.Show("let's go");
-
-
                     DataRow[] r = dt.Select();
 
 
@@ -122,7 +117,7 @@ namespace CEAUTO2
                 }
                 else
             { 
-                    MessageBox.Show("let's gon't");
+                    MessageBox.Show("Login sau parola incorecta.");
                 
             }
 
@@ -130,6 +125,13 @@ namespace CEAUTO2
             
 
         }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)13)
+            { button_login.PerformClick();}
+        }
+
         public void button2_Click(object sender, EventArgs e)
         {
 
@@ -184,7 +186,7 @@ namespace CEAUTO2
 
                 case "Ang":
 
-                    if (String.Equals(priv, "A1") | String.Equals(priv, "M1") | String.Equals(priv, "C1"))
+                    if (String.Equals(priv, "A1") | String.Equals(priv, "M1") | String.Equals(priv, "C1")|String.Equals(priv, "D1"))
                     { granted = true;}
                     break;
 

@@ -220,7 +220,25 @@ namespace CEAUTO2
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            OpenChildForm(new Administration());
+            try
+            {
+                var authform = (Application.OpenForms.OfType<Auth>().Last());
+
+                if (authform.User_priv_check("M1"))
+                {
+                    OpenChildForm(new Administration());
+                }
+                else
+                {
+                    MessageBox.Show("Insufciente permisiuni. ");
+                }
+            }
+
+            catch (Exception ex)
+
+            {
+                MessageBox.Show("Logativa!");
+            }
         }
     }
 }
