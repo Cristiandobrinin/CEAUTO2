@@ -93,6 +93,38 @@
             this.panel1.Size = new System.Drawing.Size(1434, 49);
             this.panel1.TabIndex = 1;
             // 
+
+            // login
+            // 
+            this.login.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.login.BackColor = System.Drawing.SystemColors.Window;
+            this.login.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.login.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.login.FlatAppearance.BorderSize = 0;
+            this.login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(89)))), ((int)(((byte)(89)))));
+            this.login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.login.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login.ForeColor = System.Drawing.Color.Black;
+            this.login.Location = new System.Drawing.Point(1341, 9);
+            this.login.Name = "login";
+            this.login.Size = new System.Drawing.Size(81, 31);
+            this.login.TabIndex = 13;
+            this.login.Text = "Logare";
+            this.login.UseVisualStyleBackColor = false;
+            this.login.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // ChildFormPanel
+            // 
+            this.ChildFormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ChildFormPanel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChildFormPanel.Location = new System.Drawing.Point(0, 49);
+            this.ChildFormPanel.Name = "ChildFormPanel";
+            this.ChildFormPanel.Size = new System.Drawing.Size(1434, 742);
+            this.ChildFormPanel.TabIndex = 2;
+
+            // 
+
             // pictureBox9
             // 
             this.pictureBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
