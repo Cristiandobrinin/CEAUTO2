@@ -121,7 +121,7 @@
             this.ChildFormPanel.Name = "ChildFormPanel";
             this.ChildFormPanel.Size = new System.Drawing.Size(1434, 742);
             this.ChildFormPanel.TabIndex = 2;
-            this.ChildFormPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ChildFormPanel_Paint);
+
             // 
             // pictureBox9
             // 
