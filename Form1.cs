@@ -16,18 +16,18 @@ namespace CEAUTO2
         {
             InitializeComponent();
 
-
-
-
-
-
             this.IsMdiContainer = true;
         }
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
+            
             OpenChildForm(new MainChild());
+
+
+            
         }
         public bool formIsExist(Form frmOpen)
         {
@@ -208,9 +208,7 @@ namespace CEAUTO2
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Auth auth = new Auth();
-
-            auth.Show();
+            newlogin();
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -218,6 +216,18 @@ namespace CEAUTO2
             OpenChildForm(new MainChild());
         }
 
+        public void newlogin()
+        {
+            Auth auth = new Auth();
+            auth.Show();
+
+            if (auth.WindowState == FormWindowState.Minimized)
+            {
+                auth.WindowState = FormWindowState.Normal;
+            }
+
+            auth.Activate();
+        }
         private void button1_Click_1(object sender, EventArgs e)
         {
             try
