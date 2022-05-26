@@ -30,14 +30,8 @@ namespace CEAUTO2
 
             //Instantierea la parametrii care vor fi folosite in logare si inregistrare
             string login, password, priv = "G1";
-
+        
             Boolean Logged = false;
-            
-        private void Auth_Load(object sender, EventArgs e)
-        {
-
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         { 
@@ -64,11 +58,6 @@ namespace CEAUTO2
             return hash;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         //buttonul login va citi informatia din textbox-uri si le va atribui la variabile 
         private void button_login_Click(object sender, EventArgs e)
         {  
@@ -77,11 +66,6 @@ namespace CEAUTO2
             login = textBox1.Text;
             //parola citita din textbox se incipteaza 
             password = sha256(textBox2.Text);
-
-          
-            
-            
-            
 
          
             //Mesaj care v-a fi afisat in cauza daca utilizatorul nu a introdus nimic
@@ -106,7 +90,6 @@ namespace CEAUTO2
 
 
                     DataRow[] r = dt.Select();
-
 
                     Logged = true;
 
@@ -170,43 +153,40 @@ namespace CEAUTO2
 
 
         public Boolean User_priv_check(string requirements)
-        {
-
-            
-
+        { 
             Boolean granted = false;
-            if(Logged)
-            switch (requirements)
-            {
+            if (Logged)
+                switch (requirements)
+                {
 
-                case "G1":
+                    case "G1":
 
-                    granted = true;
-                    break;
-
-                case "Ang":
-
-                    if (String.Equals(priv, "A1") | String.Equals(priv, "M1") | String.Equals(priv, "C1")|String.Equals(priv, "D1"))
-                    { granted = true;}
-                    break;
-
-                case "D1":
-
-                    if(!String.Equals(priv, "G1") && !String.Equals(priv, "A1")) { granted = true; }
-
-                    break;
-
-                case "A1":
-                    if (!String.Equals(priv,"G1") && !String.Equals(priv, "D1")) { granted = true; }
-                      
-                    break;
-
-                case "M1":
-                    if (String.Equals(priv, "M1") | String.Equals(priv, "C1")) { granted = true; }
+                        granted = true;
                         break;
 
-                case "C1":
-                    if (String.Equals(priv, "C1")) { granted = true; }
+                    case "Ang":
+
+                        if (String.Equals(priv, "A1") | String.Equals(priv, "M1") | String.Equals(priv, "C1") | String.Equals(priv, "D1"))
+                        { granted = true; }
+                        break;
+
+                    case "D1":
+
+                        if (!String.Equals(priv, "G1") && !String.Equals(priv, "A1")) { granted = true; }
+
+                        break;
+
+                    case "A1":
+                        if (!String.Equals(priv, "G1") && !String.Equals(priv, "D1")) { granted = true; }
+
+                        break;
+
+                    case "M1":
+                        if (String.Equals(priv, "M1") | String.Equals(priv, "C1")) { granted = true; }
+                        break;
+
+                    case "C1":
+                        if (String.Equals(priv, "C1")) { granted = true; }
                         break;
 
                     default:
@@ -214,15 +194,11 @@ namespace CEAUTO2
                         granted = false;
                         break;
 
-            }
-
-                
+                }
 
             return granted;
 
         }
-
-
 
     }
 }

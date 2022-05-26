@@ -21,39 +21,14 @@ namespace CEAUTO2
             InitializeComponent();
         }
 
+        //Aici se afla conectionstringul cu denumirea la server si numele la baza de date
         SqlConnection sqlConnection = new SqlConnection("Server = REVISION-PC; Database=ceauto;Trusted_Connection=True;");
 
+        //V-a fi folosit pentru a declansa niste evenimente
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-          
-        }
+        Boolean LUCREAZA = true;
 
-        public Boolean LUCREAZA = true;
-
-        
-
-
-        public bool checkconf()
-        {
-            Boolean found = false;
-
-            foreach (DataGridViewRow row in this.dataGridView2.Rows)
-            {
-                if (row.Cells[0].Value.Equals(textBox_con.Text))
-                {
-
-                    found = true;
-
-                    break;
-                }
-
-
-            }
-
-            return found;
-        }
-
+        //Este folosit pentru a afisa sau ascunde niste controale 
         public void swichconfshow()
         {
 
@@ -94,13 +69,14 @@ namespace CEAUTO2
 
         private void Child1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'ceautoDataSet.conf_auto' table. You can move, or remove it, as needed.
+            // Incarca informata in datagridview
             this.conf_autoTableAdapter.Fill(this.ceautoDataSet.conf_auto);
-            // TODO: This line of code loads data into the 'ceautoDataSet.deal_auto' table. You can move, or remove it, as needed.
+            // Incarca informata in datagridview
             this.deal_autoTableAdapter.Fill(this.ceautoDataSet.deal_auto);
 
         }
 
+        //Un swich care transfromeaza forma 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -144,11 +120,9 @@ namespace CEAUTO2
 
         }
 
-
+        //Daca faci click pe datagridview informatia v-a fi copiata in campurile respective
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-           
 
             if (e.RowIndex >= 0)
             {
@@ -165,14 +139,15 @@ namespace CEAUTO2
             }
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (LUCREAZA && textBox1.Enabled )
 
-            { 
+            {   //Daca butonul adauga lucreaza si foma nu e in stare de editare se genereaza un string care v-a executa procedurile
                 string addeal_q = "exec adddeal '" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "', '" + textBox5.Text + "'," + ((float)numericUpDown1.Value) + " ,'" + comboBox1.Text + "'";
 
-
+                //Daca checkboxul "Adauga configuratie" este activat atunci se adauga con figuratie si 
                 if (checkBox1.Checked )
                 {
                     string addconf_c = "exec addconf '" + textBox_con.Text + "','" + textBox_col.Text + "','" + textBox_mot.Text + "','" + textBox_cor.Text + "','" + textBox_cut.Text + "','" + textBox_ext.Text + "'";
@@ -199,6 +174,7 @@ namespace CEAUTO2
                     addeal_q = "exec adddeal '" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "', '" + textBox_con.Text + "'," + ((float)numericUpDown1.Value) + " ,'" + comboBox1.Text + "'";
                 }
 
+                //Executa un sting generati mai in sus
                 SqlCommand adddeal = new SqlCommand(addeal_q, sqlConnection);
                 try
                 {
@@ -215,7 +191,7 @@ namespace CEAUTO2
                 {
                     sqlConnection.Close();
                 }
-
+                //In caz de esec 
 
                 DataRow dr = ceautoDataSet.deal_auto.NewRow();
 
@@ -653,6 +629,11 @@ namespace CEAUTO2
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message.ToString()); }
+        }
+
+        private void panel_add_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
