@@ -49,7 +49,6 @@
             this.LOGO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LOGO.TabIndex = 0;
             this.LOGO.TabStop = false;
-            this.LOGO.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -60,7 +59,6 @@
             this.label1.Size = new System.Drawing.Size(145, 49);
             this.label1.TabIndex = 1;
             this.label1.Text = "CEAUTO";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -72,7 +70,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Compania CEAUTO, va ofera posibilitatea de procura si arenda,\r\n orice masina de l" +
     "a partenerii nostrii: BMW, Audi, Wolksvagen, Toyota, Nissan.";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel1
             // 
@@ -122,7 +119,6 @@
             this.MinimumSize = new System.Drawing.Size(1434, 742);
             this.Name = "MainChild";
             this.Text = "MainChild";
-            this.Load += new System.EventHandler(this.MainChild_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LOGO)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -63,7 +63,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(520, 520);
             this.panel1.TabIndex = 10;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
@@ -203,7 +202,6 @@
             this.MinimumSize = new System.Drawing.Size(700, 700);
             this.Name = "Auth";
             this.Text = "Auth";
-            this.Load += new System.EventHandler(this.Auth_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
