@@ -185,17 +185,19 @@ namespace CEAUTO2
                 }
                 catch (Exception ex) 
                 {
+                    //Din caz de esec ne afiseaza eroare
                     MessageBox.Show("eroare");
                 }
                 finally
                 {
                     sqlConnection.Close();
                 }
-                //In caz de esec 
+                //In caz orice caz conectiunea se inchide
 
+                //Se creaza un rind de date 
                 DataRow dr = ceautoDataSet.deal_auto.NewRow();
 
-               
+               //incearca sa faca puch la informatie in rindul local
                 try
                 {
 
@@ -213,7 +215,7 @@ namespace CEAUTO2
 
                 }
 
-
+                //se curata controalele
                 textBox1.Clear();
                 textBox2.Clear();
                 textBox3.Clear();
@@ -233,7 +235,7 @@ namespace CEAUTO2
             }
             else
             {
-
+                //din caz daca nu lucreaza sau e in editare el afiseaza mesajele respective
                 if(!LUCREAZA)
                 {
                     MessageBox.Show("Nu functioneaza in timp ce se editeaza configuri");
@@ -253,12 +255,16 @@ namespace CEAUTO2
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            //se afiseaza controlul pentru o noua forma
             checkBox2.Show();
 
+            //Se dezactiveaza metoda de introducere a seriei (cheii primare)
             textBox1.Enabled = false;
 
+            //Daca se alege randul -1 atunci da eroare
             if (e.RowIndex >= 0)
             {
+                //Se introduce din tabel in casete pentru modificare
                 textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells["serialDataGridViewTextBoxColumn"].Value.ToString().Trim();
                 textBox2.Text = dataGridView1.Rows[e.RowIndex].Cells["producerDataGridViewTextBoxColumn"].Value.ToString().Trim();
                 textBox3.Text = dataGridView1.Rows[e.RowIndex].Cells["modelDataGridViewTextBoxColumn"].Value.ToString().Trim();
@@ -273,8 +279,10 @@ namespace CEAUTO2
 
         }
 
+        //Nu da voie sa se modifice si sa se adauga simultan
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
+            
             if (checkBox1.Checked)
             {
                 swichconfshow();
@@ -287,10 +295,13 @@ namespace CEAUTO2
 
         }
 
+
         private void button2_Click(object sender, EventArgs e)
         {
+            //Daca controlul lucreaza 
             if (LUCREAZA)
-            {
+            { 
+                //Atunci se creaza comanda folosind informatia din casetele
                 string edit_d = "exec editdeal '" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "', '" + textBox5.Text + "'," + ((float)numericUpDown1.Value) + " ,'" + comboBox1.Text + "'";
 
                 SqlCommand edit_q = new SqlCommand(edit_d, sqlConnection);
@@ -311,6 +322,7 @@ namespace CEAUTO2
                     sqlConnection.Close();
                 }
 
+                //Face refresh in tabel
                 button5.PerformClick();
 
                 checkBox2.Hide();
@@ -318,6 +330,7 @@ namespace CEAUTO2
             }
         }
 
+        //Raspune de resetarea la toate controlalele
         private void button4_Click(object sender, EventArgs e)
         {
       
@@ -346,6 +359,7 @@ namespace CEAUTO2
              }
         }
 
+        //Raspunde de refresh (Actuakizeaza datele dupa baza de date
         private void button5_Click(object sender, EventArgs e)
         {
             this.deal_autoTableAdapter.Fill(this.ceautoDataSet.deal_auto);
@@ -354,12 +368,13 @@ namespace CEAUTO2
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //Creaza o comnada care v-a sterge 
             string addconf_c = "exec rmdeal '" + textBox1.Text + "'";
 
+            //Comanda se pregateste pentru executie
             SqlCommand addconf = new SqlCommand(addconf_c, sqlConnection);
             try
-            {
-
+            { //comanda se executa
                 sqlConnection.Open();
                 addconf.ExecuteNonQuery();
 
@@ -369,22 +384,24 @@ namespace CEAUTO2
                 MessageBox.Show("eroare");
             }
             finally
-            {
+            {   //in orice caz conectiune see inchide
                 sqlConnection.Close();
             }
 
+            //Se face reset
             button5.PerformClick();
         }
 
  
 
   
-
+        //Face refresh la tableul config
         private void button6_Click(object sender, EventArgs e)
         {
             this.conf_autoTableAdapter.Fill(this.ceautoDataSet.conf_auto);
         }
 
+        //Reseteaza casetele
         private void button7_Click(object sender, EventArgs e)
         {
 
@@ -399,16 +416,39 @@ namespace CEAUTO2
         private void button10_Click(object sender, EventArgs e)
         {
 
-            if (checkconf())
-            {
-                MessageBox.Show("Row already exists");
-
-            }
-
-            else
-            {
-
+                //creaza o comanda folosind inforematia din casete 
                 string addconf_c = "exec addconf '" + textBox_con.Text + "','" + textBox_col.Text + "','" + textBox_mot.Text + "','" + textBox_cor.Text + "','" + textBox_cut.Text + "','" + textBox_ext.Text + "'";
+                
+                //comanda se pregateste pentru executie
+                SqlCommand addconf = new SqlCommand(addconf_c, sqlConnection);
+                try
+                {
+                    //Se deschide conectiunea
+                    sqlConnection.Open();
+                    //Se executaa comanda
+                    addconf.ExecuteNonQuery();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("eroare");
+                }
+                finally
+                {
+                    //In orice caz se inchide conectiunea
+                    sqlConnection.Close();
+                }
+
+
+          
+        }
+
+      
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+                
+                string addconf_c = "exec rmconf '" + textBox_con.Text + "'";
 
                 SqlCommand addconf = new SqlCommand(addconf_c, sqlConnection);
                 try
@@ -427,45 +467,6 @@ namespace CEAUTO2
                     sqlConnection.Close();
                 }
 
-
-            }
-
-          
-        }
-
-      
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            if (!checkconf())
-            {
-                MessageBox.Show("Row already exists");
-
-            }
-
-            else
-            { 
-
-             string addconf_c = "exec rmconf '" + textBox_con.Text + "'";
-
-            SqlCommand addconf = new SqlCommand(addconf_c, sqlConnection);
-                try
-                {
-
-                    sqlConnection.Open();
-                    addconf.ExecuteNonQuery();
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("eroare");
-                }
-                finally
-                {
-                    sqlConnection.Close();
-                }
-
-            }
         }
 
         private void button9_Click(object sender, EventArgs e)
