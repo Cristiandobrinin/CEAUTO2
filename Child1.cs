@@ -570,7 +570,7 @@ namespace CEAUTO2
                         }
                     }
 
-                    //Getting the location and file name of the excel to save from user. 
+                    
                     SaveFileDialog saveDialog = new SaveFileDialog();
                     saveDialog.Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
                     saveDialog.FilterIndex = 2;
@@ -599,7 +599,7 @@ namespace CEAUTO2
         private void button11_Click(object sender, EventArgs e)
         {
             try
-            {
+            {   //se deschide aplicatia excel cu un worksheet gol
                 Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
                 Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
                 Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
@@ -608,6 +608,7 @@ namespace CEAUTO2
                 worksheet = workbook.ActiveSheet;
                 worksheet.Name = "Records";
 
+                //copie denumirile la coloane si copie informatia din datagridview in celulele respective
                 try
                 {
                     for (int i = 0; i < dataGridView2.Columns.Count; i++)
@@ -629,29 +630,31 @@ namespace CEAUTO2
                         }
                     }
 
-                    //Getting the location and file name of the excel to save from user. 
+                    //Face save la acest document 
                     SaveFileDialog saveDialog = new SaveFileDialog();
                     saveDialog.Filter = "Excel files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
                     saveDialog.FilterIndex = 2;
 
+                    //in caz de success afiseaza mesajul dat
                     if (saveDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                     {
                         workbook.SaveAs(saveDialog.FileName);
-                        MessageBox.Show("Export Successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Success");
                     }
                 }
                 catch (System.Exception ex)
                 {
+                    //In caz contrar v-a afisa eroarea
                     MessageBox.Show(ex.Message);
                 }
 
                 finally
-                {
+                {   //la sfarsit se v-a inchide aplicatia excell si se v-a golii spatiul de munca
                     app.Quit();
                     workbook = null;
                     worksheet = null;
                 }
-            }
+            }   //In caz contrar v-a afisa eroarea
             catch (Exception ex) { MessageBox.Show(ex.Message.ToString()); }
         }
     }

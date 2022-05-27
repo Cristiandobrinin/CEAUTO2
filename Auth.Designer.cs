@@ -149,6 +149,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(212, 148);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(144, 20);
             this.textBox2.TabIndex = 3;
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
@@ -185,6 +186,7 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(212, 230);
             this.textBox3.Name = "textBox3";
+            this.textBox3.PasswordChar = '*';
             this.textBox3.Size = new System.Drawing.Size(144, 20);
             this.textBox3.TabIndex = 5;
             // 
